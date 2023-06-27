@@ -1,0 +1,225 @@
+<i *ngIf="!isLoggedIn || !this.currentUser.imageUrl" class="material-icons profile" [routerLink]="['/', 'profile']" >person</i>
+<img *ngIf="isLoggedIn && this.currentUser.imageUrl" class="profile-pic profile" [routerLink]="['/', 'profile']" [src]="this.currentUser.imageUrl">
+<span *ngIf="!isLoggedIn" [routerLink]="['/', 'login']" class="login-text"><u>Login / Signup</u></span>
+<span *ngIf="isLoggedIn && this.currentUser.imageUrl" class="logout-text" (click)="logout()"><u>Logout</u></span>
+<span *ngIf="isLoggedIn && !this.currentUser.imageUrl" class="login-text" (click)="logout()"><u>Logout</u></span>
+<br>
+<div class="Futura-Font text-float">Leaderboard 🎖️</div>
+
+<i *ngIf="isLoggedIn" class="material-icons chat-btn" title="chat" [routerLink]="['/', 'message']" >chat</i>
+
+<div class="big-area-leader">
+    <div class="row header-text">
+        Top Favours Completer
+    </div>
+    <div id="toggle-buttons" class="row toggle-position">
+        <div class="toggle-date date-left no-select" [ngClass]="isThisMonth == true ? 'badge-selected' : 'badge-not-selected'" (click)="onBadgeClick('month')">
+            This month
+        </div>
+        <div class="toggle-date date-right no-select" [ngClass]="isThisMonth == false ? 'badge-selected' : 'badge-not-selected'" (click)="onBadgeClick('all')">
+            All time
+        </div>
+    </div>
+    <div id="top-half-area-leader" class="row half-area-leader">
+        <div id="first-place-casual" class="card-area-leader" (click)="onCardClick(0)">
+            <div id="first-place" class="row full-height" style="float: right;">
+                <div class="outer-card-leader">
+                    <div class="inner-card">
+                        <div class="full-height">
+                            <div class="card-title row-middle">
+                                Casual
+                                <div class="row-middle rank-number gold">
+                                    #1
+                                </div>
+                            </div>
+                            <div class="">
+                                <img *ngIf="topCasual[0][2] !== null" class="profile-pic-first" [src]="topCasual[0][2]">
+                                <img *ngIf="topCasual[0][2] == null" class="profile-pic-first" [src]="genetricProfilePicUrl">
+
+                                <div class="first-place-name">
+                                    {{ topCasual[0][1] || '-' }}
+                                </div>
+                                <div class="first-completion-badge">
+                                    {{ topCasual[0][0] || '0' }} Completions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-div" id="two-to-four">
+            <!-- Casual rank 2 -->
+            <div class="row row-outer-card" (click)="onCardClick(1)">
+                <div class="row-inner-card">
+                    <div class="row row-full-height">
+                        <div class="col-2 row-middle rank-number silver">
+                            #2
+                        </div>
+                        <div class="col-7 row-middle pic-and-name">
+                            <img *ngIf="topCasual[1][2] !== null" class="profile-pic-others" [src]="topCasual[1][2]">
+                            <img *ngIf="topCasual[1][2] == null" class="profile-pic-others" [src]="genetricProfilePicUrl">
+
+
+                            <div class="row-name-title">
+                                {{ topCasual[1][1] || '-' }}
+                            </div>
+                        </div>
+                        <div class="col-3 row-middle" >
+                            <div class="completion-badge">
+                                {{ topCasual[1][0] || '0' }} Completions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Casual rank 3 -->
+            <div class="row row-outer-card" (click)="onCardClick(2)">
+                <div class="row-inner-card">
+                    <div class="row row-full-height">
+                        <div class="col-2 row-middle rank-number bronze">
+                            #3
+                        </div>
+                        <div class="col-7 row-middle pic-and-name">
+                            <img *ngIf="topCasual[2][2] !== null" class="profile-pic-others" [src]="topCasual[2][2]">
+                            <img *ngIf="topCasual[2][2] == null" class="profile-pic-others" [src]="genetricProfilePicUrl">
+
+                            <div class="row-name-title">
+                                {{ topCasual[2][1] || '-' }}
+                            </div>
+                        </div>
+                        <div class="col-3 row-middle" >
+                            <div class="completion-badge">
+                                {{ topCasual[2][0] || '0' }} Completions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Casual rank 4 -->
+            <div class="row row-outer-card" (click)="onCardClick(3)">
+                <div class="row-inner-card">
+                    <div class="row row-full-height">
+                        <div class="col-2 row-middle rank-number bronze">
+                            #4
+                        </div>
+                        <div class="col-7 row-middle pic-and-name">
+                            <img *ngIf="topCasual[3][2] !== null" class="profile-pic-others" [src]="topCasual[3][2]">
+                            <img *ngIf="topCasual[3][2] == null" class="profile-pic-others" [src]="genetricProfilePicUrl">
+
+                            <div class="row-name-title">
+                                {{ topCasual[3][1] || '-' }}
+                            </div>
+                        </div>
+                        <div class="col-3 row-middle" >
+                            <div class="completion-badge">
+                                {{ topCasual[3][0] || '0' }} Completions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Professional -->
+    <div id="btm-half-area-leader" class="row half-area-leader">
+        <div id="first-place-casual" class="card-area-leader" (click)="onCardClick(4)">
+            <div id="first-place" class="row full-height" style="float: right;">
+                <div class="outer-card-leader">
+                    <div class="inner-card-professional">
+                        <div class="full-height">
+                            <div class="card-title row-middle">
+                                Professional
+                                <div class="row-middle rank-number gold">
+                                    #1
+                                </div>
+                            </div>
+                            <div class="">
+                                <img *ngIf="topProfessional[0][2] !== null" class="profile-pic-first" [src]="topProfessional[0][2]">
+                                <img *ngIf="topProfessional[0][2] == null" class="profile-pic-first" [src]="genetricProfilePicUrl">
+
+                                <div class="first-place-name">
+                                    {{ topProfessional[0][1] || '-' }}
+                                </div>
+                                <div class="first-completion-badge">
+                                    {{ topProfessional[0][0] || '0' }} Completions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-div" id="two-to-four">
+            <!-- Casual rank 2 -->
+            <div class="row row-outer-card" (click)="onCardClick(5)">
+                <div class="row-inner-card-professional">
+                    <div class="row row-full-height">
+                        <div class="col-2 row-middle rank-number silver">
+                            #2
+                        </div>
+                        <div class="col-7 row-middle pic-and-name">
+                            <img *ngIf="topProfessional[1][2] !== null" class="profile-pic-others" [src]="topProfessional[1][2]">
+                            <img *ngIf="topProfessional[1][2] == null" class="profile-pic-others" [src]="genetricProfilePicUrl">
+
+                            <div class="row-name-title">
+                                {{ topProfessional[1][1] || '-' }}
+                            </div>
+                        </div>
+                        <div class="col-3 row-middle" >
+                            <div class="completion-badge">
+                                {{ topProfessional[1][0] || '0' }} Completions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Casual rank 3 -->
+            <div class="row row-outer-card" (click)="onCardClick(6)">
+                <div class="row-inner-card-professional">
+                    <div class="row row-full-height">
+                        <div class="col-2 row-middle rank-number bronze">
+                            #3
+                        </div>
+                        <div class="col-7 row-middle pic-and-name">
+                            <img *ngIf="topProfessional[2][2] !== null" class="profile-pic-others" [src]="topProfessional[2][2]">
+                            <img *ngIf="topProfessional[2][2] == null" class="profile-pic-others" [src]="genetricProfilePicUrl">
+
+                            <div class="row-name-title">
+                                {{ topProfessional[2][1] || '-' }}
+                            </div>
+                        </div>
+                        <div class="col-3 row-middle" >
+                            <div class="completion-badge">
+                                {{ topProfessional[2][0] || '0' }} Completions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Casual rank 4 -->
+            <div class="row row-outer-card" (click)="onCardClick(7)">
+                <div class="row-inner-card-professional">
+                    <div class="row row-full-height">
+                        <div class="col-2 row-middle rank-number bronze">
+                            #4
+                        </div>
+                        <div class="col-7 row-middle pic-and-name">
+                            <img *ngIf="topProfessional[3][2] !== null" class="profile-pic-others" [src]="topProfessional[3][2]">
+                            <img *ngIf="topProfessional[3][2] == null" class="profile-pic-others" [src]="genetricProfilePicUrl">
+                            
+                            <div class="row-name-title">
+                                {{ topProfessional[3][1] || '-' }}
+                            </div>
+                        </div>
+                        <div class="col-3 row-middle" >
+                            <div class="completion-badge">
+                                {{ topProfessional[3][0] || '0' }} Completions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

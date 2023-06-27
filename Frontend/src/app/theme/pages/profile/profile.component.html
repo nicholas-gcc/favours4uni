@@ -1,0 +1,217 @@
+<i *ngIf="!curr?.imageUrl" class="material-icons profile" [routerLink]="['/', 'profile']" >person</i>
+<img *ngIf="curr?.imageUrl" class="profile-pic profile" [routerLink]="['/', 'profile']" [src]="this.curr.imageUrl">
+<span *ngIf="curr?.imageUrl" class="logout-text" (click)="logout()"><u>Logout</u></span>
+<span *ngIf="!curr?.imageUrl" class="login-text" (click)="logout()"><u>Logout</u></span>
+<br>
+<div *ngIf="!isViewOthers" class="Futura-Font text-float">My Profile 🎓</div>
+<div *ngIf="isViewOthers" class="Futura-Font text-float">{{ username }}'s Profile 🎓</div>
+
+<i class="material-icons chat-btn" title="chat" [routerLink]="['/', 'message']" >chat</i>
+
+<div class="section-card">
+    <div class="row custom_row">
+        <div class="column1">
+          <div *ngIf="!isViewOthers"  class="outer-card-profile">
+            <div class="inner-card-profile">
+              <div class="card-body">
+                <img *ngIf="this.curr?.imageUrl" id="OpenImgUpload" class="profile-img" [src]="this.curr.imageUrl" (click)="onClickPic()">
+                <img *ngIf="!this.curr?.imageUrl" id="OpenImgUpload" class="profile-img" [src]="this.defaultDp" (click)="onClickPic()">
+                <div class="hide" (click)="onClickPic()">Change image</div>
+                <div class="form-group">
+                  <input type="file" #Image
+                         id="file"
+                         (change)="handleFileInput($event)" style="display:none">
+                </div>
+                <p class="profile-label">Name:</p>
+                <p class="profile-text">{{ userData['firstName'] + " " + userData['lastName'] }}</p>
+                <p class="profile-label">Bio:</p>
+                <p class="profile-text">{{ userData['bio'] }}</p>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="isViewOthers"  class="outer-card-other-profile">
+            <div class="inner-card-profile">
+              <div class="card-body">
+                <img *ngIf="this.othersDetails?.imageUrl && this.othersDetails.imageUrl != ''" id="OpenImgUpload" class="profile-img-others" [src]="this.othersDetails.imageUrl">
+                <img *ngIf="!this.othersDetails?.imageUrl || this.othersDetails.imageUrl == ''" id="OpenImgUpload" class="profile-img-others" [src]="this.defaultDp">
+                <p class="profile-label">Username:</p>
+                <p class="profile-text">{{ othersDetails?.username }}</p>
+                <p class="profile-label">Email:</p>
+                <p class="profile-text">{{ othersDetails?.email || '-' }}</p>
+                <p class="profile-label">Telegram Handle:</p>
+                <p class="profile-text">{{ othersDetails?.telegram || '-' }}</p>
+                <p class="profile-label">Bio:</p>
+                <p class="profile-text">{{ othersDetails?.bio || '-' }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column2">
+          <div *ngIf="!isViewOthers"  class="outer-card-register-profile">
+            <div class="inner-card-login">
+                <div class="full-height-login">
+                    <div class="card-title-login row-middle-login">
+                        Personal Information
+                    </div>
+                    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="firstname">First Name</label>
+                                <input
+                                  type="text"
+                                  id="firstname"
+                                  formControlName="firstname"
+                                  class="form-control username-register-box-profile"
+                                  placeholder="First name"
+                                  autocomplete="off">
+                                <span *ngIf="!signupForm.get('firstname')?.valid && signupForm.get('firstname')?.touched" class="help-block">
+                                  <span class="required-text" *ngIf="signupForm.get('firstname')?.errors?.required">This field is required!</span>
+                                </span>
+                            </div>
+                            <div class="col-6 form-group">
+                                <label for="lastname">Last Name</label>
+                                <input
+                                  type="text"
+                                  id="lastname"
+                                  formControlName="lastname"
+                                  class="form-control username-register-box-profile"
+                                  placeholder="Last name"
+                                  autocomplete="off">
+                                <span *ngIf="!signupForm.get('lastname')?.valid && signupForm.get('lastname')?.touched" class="help-block">
+                                  <span class="required-text" *ngIf="signupForm.get('lastname')?.errors?.required">This field is required!</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="email">Email</label>
+                                <input
+                                  type="text"
+                                  id="email"
+                                  formControlName="email"
+                                  class="form-control username-register-box-profile"
+                                  placeholder="Email"
+                                  autocomplete="off"
+                                  (click)="onEmailClick()">
+                                <span
+                                  *ngIf="!signupForm.get('email')?.valid && signupForm.get('email')?.touched"
+                                  class="help-block required-text">Please enter a valid email!</span>
+                                <span
+                                  *ngIf="emailInUse"
+                                  class="help-block required-text">This email is already in used!</span>
+                              </div>
+                            <div class="col-6 form-group">
+                                <label for="phonenumber">Phone Number</label>
+                                <input
+                                  type="number"
+                                  id="phonenumber"
+                                  formControlName="phonenumber"
+                                  class="form-control username-register-box-profile"
+                                  placeholder="Phone number"
+                                  autocomplete="off">
+                                <span *ngIf="!signupForm.get('phonenumber')?.valid && signupForm.get('phonenumber')?.touched" class="help-block">
+                                  <span class="required-text" *ngIf="signupForm.get('phonenumber')?.errors?.required">This field is required!</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <label for="username">Username</label>
+                                <input
+                                  type="text"
+                                  id="username"
+                                  formControlName="username"
+                                  class="form-control username-register-box-profile"
+                                  placeholder="Username"
+                                  autocomplete="off"
+                                  (click)="onUsernameClick()">
+                                  <span *ngIf="!signupForm.get('username')?.valid && signupForm.get('username')?.touched" class="help-block">
+                                    <span class="required-text" *ngIf="signupForm.get('username')?.errors?.required">This field is required!</span>
+                                    <span class="required-text" *ngIf="signupForm.get('username')?.errors?.minlength">Username should be longer than 8 characters!</span>
+                                  </span>
+                                  <span
+                                    *ngIf="usernameInUse"
+                                    class="help-block required-text">This username is already in taken!</span>
+                              </div>
+                            <div class="col-6 form-group">
+                                <label for="telehandle">Telegram Handle</label>
+                                <input
+                                  type="text"
+                                  id="telehandle"
+                                  formControlName="telehandle"
+                                  class="form-control username-register-box-profile"
+                                  placeholder="Telegram handle"
+                                  autocomplete="off">
+                                <span *ngIf="!signupForm.get('telehandle')?.valid && signupForm.get('telehandle')?.touched" class="help-block">
+                                  <span class="required-text" *ngIf="signupForm.get('telehandle')?.errors?.required">This field is required!</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="bio">Bio</label>
+                                <input
+                                  type="text"
+                                  id="bio"
+                                  formControlName="bio"
+                                  class="form-control bio-box-profile"
+                                  placeholder="Something about yourself ..."
+                                  autocomplete="off">
+                              </div>
+                        </div>
+                    </form>
+                    <div class="login-badge" type="submit" (click)="onSubmit()">
+                        Save Changes
+                        <div *ngIf="isLoading" class="loader"></div>
+                    </div>
+                    <span
+                        *ngIf="sthWentWrong"
+                        class="help-block required-text">Something went wrong! Please try again later :(</span>
+                </div>
+            </div>
+          </div>
+
+          <div *ngIf="isViewOthers"  class="outer-favour-area">
+            <div *ngIf="othersCompletedFavour.length < 1">
+              <div class="other-favour-none-outline">
+                This user has not completed any favours.
+              </div>
+            </div>
+            <div *ngIf="othersCompletedFavour.length > 0" class="completed-favour-text">
+              Completed Favours &nbsp; &#40;{{ othersCompletedFavour.length }} in total&#41;
+            </div>
+            <div *ngIf="!isViewingSelf" [ngClass]="othersCompletedFavour.length > 0 ? 'message-btn-icon' : 'message-btn-icon-no'" (click)="onMessage()">
+              <span style="font-size: 20px;">Message &nbsp;</span>
+              <i class="material-icons">chat_bubble_outline</i>
+            </div>
+            <div *ngFor="let f of othersCompletedFavour">
+              <div class="other-favour-card-outer">
+                <div [ngClass]="f.category == 'Casual' ? 'other-favour-card-inner' : 'other-favour-card-inner-pro'">
+                  <div class="others-favour">
+                    <div class="other-header">
+                      <div class="others-title row justify-content-between">
+                          <span class="col-9 others-title-text" title="{{f.title}}">{{ f.title }}</span>
+                          <div class="col-3 others-date-font">
+                            {{ f.date }}
+                          </div>
+                      </div>
+                    </div>
+                    <div class="others-body">
+                        <div class="others-body-text">{{ f.body }}</div>
+                        <div class="row others-location">
+                            <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                            <div>
+                                {{ f.location }}
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+

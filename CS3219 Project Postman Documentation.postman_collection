@@ -1,0 +1,2995 @@
+{
+	"info": {
+		"_postman_id": "57820d73-4328-4be7-adf4-da4a95248385",
+		"name": "CS3219 Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Users",
+			"item": [
+				{
+					"name": "1.1 Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alicetan@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.1 Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"alicetan@gmail.com\",\r\n    \"password\": \"test123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "922"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"39a-GYTaBWXuVK7jhnRf/xb0yamQlrY\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 28 Oct 2021 10:53:18 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1MjU1NWEyMjM3MWYxMGY0ZTIyZjFhY2U3NjJmYzUwZmYzYmVlMGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNTQxODM5NywidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM1NDE4Mzk3LCJleHAiOjE2MzU0MjE5OTcsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.VfhMGuxVQvO3HaFfVwIfZ2zLnKKuWhmZdhGpykZOugp8TxfM7_3hGOJa1I5zZRIFXCU-obWTzhzwas-ADm3dztZAQKZjTZeNShebUqj1GfC2PIBWQGI3NGR8Aet-ZB6GA0_frGQWfXiNCegGGGO9fjjZ6h-1rOCcPIUwr-S3Wv6N8OQG8Aw1B9V99eh9CdAvsjZBQGilEKNW48siHiwll080q__ziCHmFRggkD9fetIvsmcosxYiuu9g3M0vTZAo4sUIl2MwMzU9XqfMe1aHuZkjWOSkNrh94e1dxPCDo7zdFR67tyk4Txq6oT9ZCLWY3cfmiXY453yNY3cZkqUfMg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "1.2 Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Augustine\",\r\n    \"lastName\": \"Kau\",\r\n    \"email\": \"augustine@gmail.com\",\r\n    \"phoneNumber\": \"83390516\",\r\n    \"password\": \"admin@123\",\r\n    \"confirmPassword\": \"admin@123\",\r\n    \"username\": \"admin@aug\",\r\n    \"telegramHandle\": \"augustinekau\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.2 Sign Up",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Augustine\",\r\n    \"lastName\": \"Kau\",\r\n    \"email\": \"augustine@kau.com\",\r\n    \"phoneNumber\": \"83390516\",\r\n    \"password\": \"password\",\r\n    \"username\": \"augustinekau\",\r\n    \"telegramHandle\": \"augustinekau\",\r\n    \"bio\": \"awesome coder\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/signup",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "920"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"398-u6GRgC5GakYwMxlknM6BzwTUvzk\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 28 Oct 2021 18:38:16 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1MjU1NWEyMjM3MWYxMGY0ZTIyZjFhY2U3NjJmYzUwZmYzYmVlMGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNTQ0NjI5NSwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM1NDQ2Mjk1LCJleHAiOjE2MzU0NDk4OTUsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.BV42VdKzziHNV4lcy1al6mgonln5tPifc4ZaQ5lmDx39maUCmug8DrGE4HJ0w0DWFi3_LCSZL7fMfj04Pbi-BPs3CMA_uTVbHr4RN0-t3CMTjmXOQ57DPWnsXAWXeKVw-5eC5Ew7RoHv35p_DMYLQBWcrF-KJVLtBssVH_DOUeefI-h4qNvZ1VRTlkMlPgiZYl1UH5RalxMQSqWNzeA8BmAe80v-E77R2r9DCGohpbVbtANE_DSrAYGqclbbembAcohLs7trXF-gtIdLKxqH1a5xla6dsm_DyYKZagVzkCH2QQPFFcy1V03P4qIt1WHpCRr2heeIJC4H7FwOZAF3Eg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "1.3 Upload Profile Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1MjU1NWEyMjM3MWYxMGY0ZTIyZjFhY2U3NjJmYzUwZmYzYmVlMGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNTQyMjQwMCwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM1NDIyNDAwLCJleHAiOjE2MzU0MjYwMDAsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.aBJNfR7WzygetFFn9VKEPCTOf8Nm27dqOc0keQBYesucwDXMj8d5DfcnT_hHgDWHwyDYVkaZya8HVjj_allPOSVff8qDmWRCMVS-P8SXUEX81QoUwTcIlyE9TSztkQ1e5Sp5dMeIYC8O9u9WnMVh7vX0JyyRFdCFobmb6kOM5JNFXM2i12TzjUHf9Jl43xq9_piMAslRl10LzNLqYFg-uF7c766OWzkGLFDplVBWxnrBbd8KTNgUuE5z87auiiA9jz_i9osr1hjwdupjucmL5P0f9hZLLJbGgkI_Sc3fcL5LAhactUuE54DDjEiAFTH7X-ZpsO-ATD8b94SpgMWW6Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Augustine Kau/Downloads/image-removebg-preview (3).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/image",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.3 Upload Profile Photo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Augustine Kau/Downloads/image-removebg-preview (3).png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/image",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "41"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"29-t18eybJEg82gmBQEHAe+1NmSQD0\""
+								},
+								{
+									"key": "date",
+									"value": "Thu, 28 Oct 2021 12:00:14 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image uploaded successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "1.4 Get User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1MjU1NWEyMjM3MWYxMGY0ZTIyZjFhY2U3NjJmYzUwZmYzYmVlMGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNTQxODM5NywidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM1NDE4Mzk3LCJleHAiOjE2MzU0MjE5OTcsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.VfhMGuxVQvO3HaFfVwIfZ2zLnKKuWhmZdhGpykZOugp8TxfM7_3hGOJa1I5zZRIFXCU-obWTzhzwas-ADm3dztZAQKZjTZeNShebUqj1GfC2PIBWQGI3NGR8Aet-ZB6GA0_frGQWfXiNCegGGGO9fjjZ6h-1rOCcPIUwr-S3Wv6N8OQG8Aw1B9V99eh9CdAvsjZBQGilEKNW48siHiwll080q__ziCHmFRggkD9fetIvsmcosxYiuu9g3M0vTZAo4sUIl2MwMzU9XqfMe1aHuZkjWOSkNrh94e1dxPCDo7zdFR67tyk4Txq6oT9ZCLWY3cfmiXY453yNY3cZkqUfMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.4 Get User Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "920"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"398-V/JZrhR8Ad4IHPFhdIokEJJ/3x8\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 07 Nov 2021 06:29:37 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userCredentials\": {\n        \"telegram\": \"augustinekau\",\n        \"firstName\": \"Augustine\",\n        \"userId\": \"WrIqaNkcL9hiDKYBJ8DBb3bajIs1\",\n        \"bio\": \"awesome coder\",\n        \"telegramHandle\": \"augkau\",\n        \"favoursCompleted\": [\n            {\n                \"favour_id\": \"9\",\n                \"date_completion\": {\n                    \"_seconds\": 1635609600,\n                    \"_nanoseconds\": 0\n                },\n                \"type\": \"Casual\"\n            },\n            {\n                \"date_completion\": {\n                    \"_seconds\": 1635609600,\n                    \"_nanoseconds\": 0\n                },\n                \"favour_id\": \"10\",\n                \"type\": \"Casual\"\n            },\n            {\n                \"type\": \"Casual\",\n                \"favour_id\": \"11\",\n                \"date_completion\": {\n                    \"_seconds\": 1633190400,\n                    \"_nanoseconds\": 0\n                }\n            },\n            {\n                \"favour_id\": \"12\",\n                \"type\": \"Casual\",\n                \"date_completion\": {\n                    \"_seconds\": 1635782460,\n                    \"_nanoseconds\": 0\n                }\n            },\n            {\n                \"date_completion\": {\n                    \"_seconds\": 1635932068,\n                    \"_nanoseconds\": 874000000\n                },\n                \"favour_id\": \"bRdqZXPiT6d0e7F4y00f\",\n                \"type\": \"Casual\"\n            }\n        ],\n        \"email\": \"augustine@kau.com\",\n        \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/favours4uni.appspot.com/o/augustinekau.jpg?alt=media\",\n        \"username\": \"augustinekau\",\n        \"phoneNumber\": \"91234567\",\n        \"lastName\": \"Kau\",\n        \"createdAt\": \"2021-10-28T18:38:16.496Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "1.5 Update User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjI2NjU2OCwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM2MjY2NTY4LCJleHAiOjE2MzYyNzAxNjgsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Kl3rNf44Zo74I4RrHDOHc3E3fQMuBDvoHVyoq_E4vOVcXO3DlqUsFbP0Icn87ZyGtfFqhOFoBGNg1F4Os4-ir6Twc89x4Y9oXHPi8tbhcRvIJDXSiudNjQzms7Jg5MjPYX1GWLIuoZIvGoEUxmCzYxaxA6azQIks3H2JesQw4CR6hMe-kbwfHnVUNTBvYF_P9Jn1iFh7yYHjJWOg2-0HTrXDGEVDuIRnLo3LOw_GgFnbPoAyV1F3cEdDQitQkqO_zRGFbChtH18nKYnsKxjlZHABcppxXjBuroTgmupvzq2IcsQUEJn1q_gUxWrSedauLXWERuCoNOZjXBmVD3LSAQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\": \"98765432\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.5 Update User Details",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phoneNumber\": \"98765432\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "34"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"22-lXM8Uz2GUyXTKE4UlnpCc0IKN8s\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 07 Nov 2021 06:50:38 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "1.6 Get Top Four Casual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/topFourCasual",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"topFourCasual"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.6 Get Top Four Casual",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/topFourCasual",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"topFourCasual"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "189"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"bd-I1smKEDBtrz7SKYfG71AioXHYzw\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 01 Nov 2021 18:17:54 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    [\n        3,\n        \"augustinekau\",\n        \"https://firebasestorage.googleapis.com/v0/b/favours4uni.appspot.com/o/augustinekau.jpg?alt=media\"\n    ],\n    [\n        2,\n        \"feliciathegoat\",\n        null\n    ],\n    [\n        1,\n        \"xAntifreeze\",\n        null\n    ],\n    [\n        1,\n        \"thomastan\",\n        null\n    ]\n]"
+						}
+					]
+				},
+				{
+					"name": "1.7 Get Top Four Professional",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/topFourProfessional",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"topFourProfessional"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.7 Get Top Four Professional",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/topFourProfessional",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"topFourProfessional"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "84"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"54-w91YZFuuULzc54u/3tfPgSeE4f8\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 01 Nov 2021 18:07:19 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    [\n        1,\n        \"boblee\",\n        null\n    ],\n    [\n        1,\n        \"alicetan2\",\n        null\n    ],\n    [\n        1,\n        \"admin@aug\",\n        null\n    ],\n    [\n        0,\n        \"xAntifreeze\",\n        null\n    ]\n]"
+						}
+					]
+				},
+				{
+					"name": "1.8 Get Top Four Casual Monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/topFourCasual/monthly",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"topFourCasual",
+								"monthly"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Top Four Casual Monthly",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/topFourCasual/monthly",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"topFourCasual",
+										"monthly"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "93"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"5d-yqXWQY2pHM/nDkkC9tIxNpRfSow\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 06:52:34 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    [\n        3,\n        \"feliciathegoat\",\n        null\n    ],\n    [\n        1,\n        \"xAntifreeze\",\n        null\n    ],\n    [\n        1,\n        \"thomastan\",\n        null\n    ],\n    [\n        1,\n        \"nicholas5@\",\n        null\n    ]\n]"
+						}
+					]
+				},
+				{
+					"name": "1.9 Get Top Four Professional Monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/topFourProfessional/monthly",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"topFourProfessional",
+								"monthly"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Top Four Professional Monthly",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/topFourProfessional/monthly",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"topFourProfessional",
+										"monthly"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "84"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"54-1VMSjf7dHQJd75eYz93ukaXkBQA\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 06:52:59 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    [\n        2,\n        \"admin@aug\",\n        null\n    ],\n    [\n        1,\n        \"boblee\",\n        null\n    ],\n    [\n        1,\n        \"alicetan2\",\n        null\n    ],\n    [\n        0,\n        \"xAntifreeze\",\n        null\n    ]\n]"
+						}
+					]
+				},
+				{
+					"name": "1.10 Get Image Url",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/imageUrl/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"imageUrl",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "augustinekau"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.10 Get Image Url - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/imageUrl/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"imageUrl",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Image Url retrieved successfully\",\r\n    \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/favours4uni.appspot.com/o/alicetan.jpg?alt=media&token=e2c244fa-17e6-472e-8329-2e50bb1c6c0a\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "1.11 Get Another User's Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjM0OTA2NCwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzQ5MDY0LCJleHAiOjE2MzYzNTI2NjQsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.F8RoMoY8oKLyBZokNbBTxqiPFlDlF9TOmy7A6jvnf5v8v7OinUjhFln6hzU2MyIevpUKLpEpmYuEQ3WuksEnJv9CSYt99j8F5xoW1HBrqIg3JS4TNvXf9XIFC1-z2QfBlECdEo9skHScgzWnIbP_fYgoDMZYOidsgAJ33KafyjN1AesGqzUuVSOHmLcX0NcQRM9qwJ_akpiRmSycihsKlg8WV4Lll8cNZtpYYG1_Mr9yN5FiZ6d4zaA7dLk1JoQwxWW5aym-MAFkvKnabp_NHHWEHKHL3cb6oDL64O1tDdydMOes02QQruW_GPMXkF5be1IQ4XAD4-bPmeVZ9x28aA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "augustinekau"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.11 Get Another User's Details - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"messages\": \"Retrieved another user's details successfully\",\r\n    \"bio\": \"hi my name is alice\",\r\n    \"email\": \"alicetan@gmail.com\",\r\n    \"username\": \"alicetan\",\r\n    \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/favours4uni.appspot.com/o/alicetan.jpg?alt=media&token=e2c244fa-17e6-472e-8329-2e50bb1c6c0a\",\r\n    \"favoursCompleted\": [\r\n        {\r\n            \"date_completion\": \"08/11/2021, 1:55:29 am\",\r\n            \"favour_id\": \"0m01jNNWNXfOGXMfKsCC\",\r\n            \"type\": \"Professional\"\r\n        },\r\n        {\r\n            \"date_completion\": \"01/11/2021, 10:22:00 pm\",\r\n            \"favour_id\": \"fJrUI268EnI1c7RjeUxi\",\r\n            \"type\": \"Professional\"\r\n        }\r\n    ]\r\n}"
+						},
+						{
+							"name": "1.11 Get Another User's Details - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "augustinekau"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "704"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"2c0-AaBe6FBQPJ+IxG3rqsmAPzC/Hqk\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 08 Nov 2021 05:24:46 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"messages\": \"Retrieved another user's details successfully\",\n    \"bio\": \"awesome coder\",\n    \"email\": \"augustine@kau.com\",\n    \"telegram\": \"augustinekau\",\n    \"username\": \"augustinekau\",\n    \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/favours4uni.appspot.com/o/augustinekau.jpg?alt=media\",\n    \"favoursCompleted\": [\n        {\n            \"date_completion\": \"03/11/2021, 5:34:28 pm\",\n            \"favour_id\": \"bRdqZXPiT6d0e7F4y00f\",\n            \"type\": \"Casual\"\n        },\n        {\n            \"date_completion\": \"02/11/2021, 12:01:00 am\",\n            \"favour_id\": \"12\",\n            \"type\": \"Casual\"\n        },\n        {\n            \"date_completion\": \"31/10/2021, 12:00:00 am\",\n            \"favour_id\": \"9\",\n            \"type\": \"Casual\"\n        },\n        {\n            \"date_completion\": \"31/10/2021, 12:00:00 am\",\n            \"favour_id\": \"10\",\n            \"type\": \"Casual\"\n        },\n        {\n            \"date_completion\": \"03/10/2021, 12:00:00 am\",\n            \"favour_id\": \"11\",\n            \"type\": \"Casual\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "1.12 Get Favours Completed By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjM0OTA2NCwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzQ5MDY0LCJleHAiOjE2MzYzNTI2NjQsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.F8RoMoY8oKLyBZokNbBTxqiPFlDlF9TOmy7A6jvnf5v8v7OinUjhFln6hzU2MyIevpUKLpEpmYuEQ3WuksEnJv9CSYt99j8F5xoW1HBrqIg3JS4TNvXf9XIFC1-z2QfBlECdEo9skHScgzWnIbP_fYgoDMZYOidsgAJ33KafyjN1AesGqzUuVSOHmLcX0NcQRM9qwJ_akpiRmSycihsKlg8WV4Lll8cNZtpYYG1_Mr9yN5FiZ6d4zaA7dLk1JoQwxWW5aym-MAFkvKnabp_NHHWEHKHL3cb6oDL64O1tDdydMOes02QQruW_GPMXkF5be1IQ4XAD4-bPmeVZ9x28aA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/favoursCompleted/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"favoursCompleted",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "augustinekau"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "1.12 Get Favours Completed By User - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/user/favoursCompleted/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"favoursCompleted",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Retrieved favours completed by user successfully\",\r\n    \"favours\": [\r\n        {\r\n            \"favour_id\": \"0m01jNNWNXfOGXMfKsCC\",\r\n            \"title\": \"Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\r\n            \"body\": \"Body of test favour. Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3 Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\r\n            \"category\": \"Professional\",\r\n            \"location\": \"UTown\"\r\n        },\r\n        {\r\n            \"favour_id\": \"fJrUI268EnI1c7RjeUxi\",\r\n            \"title\": \"Help me sample my music\",\r\n            \"body\": \"Ï'm embarking on a new album release\",\r\n            \"category\": \"Professional\",\r\n            \"location\": \"Yonkers, New York\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "2. Favours",
+			"item": [
+				{
+					"name": "2.1 Get All Favours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Favours",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "1389"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"56d-JT3Go09TQpXtd8oyhpSfUwS0IK4\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 10 Oct 2021 14:35:46 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"favour_id\": \"1234\",\n        \"title\": \"Help me 5\",\n        \"body\": \"need help walking my fish\",\n        \"urgent\": true,\n        \"category\": \"casual\",\n        \"poster\": \"jordanyoong\",\n        \"timestamp_posted\": \"Thu Oct 07 2021 11:38:26 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": {\n            \"_seconds\": 1628524800,\n            \"_nanoseconds\": 0\n        },\n        \"location\": \"Hougang, Singapore\",\n        \"comments\": {}\n    },\n    {\n        \"title\": \"Help me 2\",\n        \"body\": \"Description test\",\n        \"urgent\": true,\n        \"category\": \"casual\",\n        \"poster\": \"nicholasgcc\",\n        \"timestamp_posted\": \"Thu Oct 07 2021 11:29:53 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": {\n            \"_seconds\": 1628524800,\n            \"_nanoseconds\": 0\n        },\n        \"location\": \"Bedok, Singapore\",\n        \"comments\": {}\n    },\n    {\n        \"title\": \"Help me 2\",\n        \"body\": \"Description test\",\n        \"urgent\": true,\n        \"category\": \"casual\",\n        \"poster\": \"nicholasgcc\",\n        \"timestamp_posted\": \"Thu Oct 07 2021 11:27:14 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"8/10/2021\",\n        \"location\": \"Bedok, Singapore\",\n        \"comments\": {}\n    },\n    {\n        \"favour_id\": \"1234\",\n        \"title\": \"Title\",\n        \"body\": \"Description\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": {\n            \"username\": \"alicetan\",\n            \"profile\": {\n                \"_firestore\": {\n                    \"projectId\": \"favours4uni\"\n                },\n                \"_path\": {\n                    \"segments\": [\n                        \"users\",\n                        \"alicetan\"\n                    ]\n                },\n                \"_converter\": {}\n            }\n        },\n        \"timestamp_posted\": \"6/10/2021\",\n        \"timestamp_due\": \"8/10/2021\",\n        \"location\": \"Serangoon\",\n        \"comments\": {\n            \"single_comment\": {\n                \"text_comment\": \"I want to help!\",\n                \"commenter\": {\n                    \"username\": \"boblee\",\n                    \"profile\": {\n                        \"_firestore\": {\n                            \"projectId\": \"favours4uni\"\n                        },\n                        \"_path\": {\n                            \"segments\": [\n                                \"users\",\n                                \"boblee\"\n                            ]\n                        },\n                        \"_converter\": {}\n                    }\n                }\n            }\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "2.2 Get all Casual Favours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/casual",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"casual"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.2 Get all Casual Favours",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/casual",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"casual"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "2907"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"b5b-5EKei+T5mCeCjuapzSB4vwOpGpY\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 08:23:29 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"favour_id\": \"0iNWHoNAfJVCyYzQUssk\",\n        \"title\": \"Help to buy lunch from Utown\",\n        \"body\": \"Hi guys! I'm feeling sick and cannot go to buy lunch. Is anyone free to help me dabao from food clique? Thanks! I live at PGP Block 13 :)\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"jordanyoong\",\n        \"timestamp_posted\": \"Tue Nov 02 2021 13:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Sat Dec 25 2021 08:30:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"PGP Block 13\"\n    },\n    {\n        \"favour_id\": \"2PYnQSnlG8QG6E74Gx0e\",\n        \"title\": \"Need a ride home ASAP\",\n        \"body\": \"Description test\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"nicholasgcc\",\n        \"timestamp_posted\": \"Thu Oct 07 2021 11:29:53 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Wed Dec 01 2021 16:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Bedok, Singapore\"\n    },\n    {\n        \"favour_id\": \"OHIBiyeMSpIi93XD7TdF\",\n        \"title\": \"Not able to go back hall. Need help to water my plants.\",\n        \"body\": \"Description test 2\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"nicholasgcc\",\n        \"timestamp_posted\": \"Thu Oct 07 2021 11:27:14 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Thu Nov 04 2021 12:22:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Utown Swimming Pool\"\n    },\n    {\n        \"favour_id\": \"8JWiBWeRARHVvmollzyJ\",\n        \"title\": \"Need help with CS3219 Assignment\",\n        \"body\": \"Body of test favour\",\n        \"urgent\": false,\n        \"category\": \"Casual\",\n        \"poster\": \"Augustine\",\n        \"timestamp_posted\": \"Mon Oct 18 2021 18:34:59 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Thu Jan 06 2022 03:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Sengkang\"\n    },\n    {\n        \"favour_id\": \"Plv3H67jNQZouAghVBAk\",\n        \"title\": \"need help walking my fish\",\n        \"body\": \"i am too busy i am too busy i am too busy i am too busyi am too busy i am too busyi am too busyi am too busyi am too busy i am too busyi am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busyi am too busy i am too busyi am too busyi am too busyi am too busy i am too busyi am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"suanne\",\n        \"timestamp_posted\": \"Mon Oct 11 2021 05:43:10 GMT+0000 (Coordinated Universal Time)\",\n        \"timestamp_due\": \"Fri Jan 01 2021 08:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Nic house\"\n    },\n    {\n        \"favour_id\": \"bRdqZXPiT6d0e7F4y00f\",\n        \"title\": \"Help me 5\",\n        \"body\": \"need help walking my fish\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"alicetan\",\n        \"timestamp_posted\": \"Mon Nov 01 2021 17:45:12 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Tue Aug 10 2021 00:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Hougang, Singapore\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "2.3 Get all Professional Favours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/professional",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"professional"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.3 Get all Professional Favours",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/professional",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"professional"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "2232"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"8b8-NHiL7YvetnynJSuEVitcU4coV+A\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 08:23:41 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"favour_id\": \"dgP7VOjFFFBrVC86WoCm\",\n        \"title\": \"Just learnt to bake! Help to taste :)\",\n        \"body\": \"Body of test favour\",\n        \"urgent\": true,\n        \"category\": \"Professional\",\n        \"poster\": \"augustinekau\",\n        \"timestamp_posted\": \"Sun Oct 10 2021 22:56:58 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Tue Nov 30 2021 00:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Sengkang\"\n    },\n    {\n        \"favour_id\": \"dtgZRL4lafGzbuUBmVk9\",\n        \"title\": \"Sleep research. Need volunteer to help to sleep \",\n        \"body\": \"Edited body of test favour\",\n        \"urgent\": true,\n        \"category\": \"Professional\",\n        \"poster\": \"sarah w.\",\n        \"timestamp_posted\": \"Sun Oct 10 2021 22:48:34 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Wed Dec 08 2021 16:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Sengkang\"\n    },\n    {\n        \"favour_id\": \"0m01jNNWNXfOGXMfKsCC\",\n        \"title\": \"Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\n        \"body\": \"Body of test favour. Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3 Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\n        \"urgent\": false,\n        \"category\": \"Professional\",\n        \"poster\": \"augustinekau\",\n        \"timestamp_posted\": \"Mon Oct 18 2021 19:48:05 GMT+0800 (Singapore Standard Time)\",\n        \"timestamp_due\": \"Fri Dec 31 2021 12:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"UTown\",\n        \"requestors\": [\n            {\n                \"isAccepted\": false,\n                \"message\": \"I want to help more!\",\n                \"username\": \"alicetan\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "2.4 Post Single Favour",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjM4Mjg5OCwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzgyODk4LCJleHAiOjE2MzYzODY0OTgsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.N5o7FwGDpkPc3nNoAgNkZRZ4KFdXRe-jeTZiiik525d3J4AO51DtA3Vbf6GSiF4DRZEg85QBCqYWAiSlbqXyiyM1t3vC-NAu3gnNJy0ITq9sNQk7Nw2c8gglNlDkKCAHjt6PMuelmQmVvMDGVz59yeuOuxCeE3KMShRF7lWNGuzkiWV9EEM7aNicg1h1Lyjbf4zFGI41ihu6FuAOXm7bt0ghJM12FKD9ZpKobCt-87Kn9wNlpcdyt1_PLBG6LiX7fV5Kkcl3WKy-2ckA4CVaBgjLxmEm0gvXtphZCT0_o3EPUElwP-8oKwQWAl2v5DbpMppd19UQxx17e1NHkYtJAQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Batman\",\r\n\t\"body\": \"Hi guys! I just lost my wallet in ERC and can't find it. Has anyone seen it or willing to help me find together?\",\r\n\t\"urgent\": true,\r\n\t\"category\": \"Casual\",\r\n\t\"poster\": \"augustinekau\",\r\n\t\"timestamp_due\": \"2021-12-25T04:59:35\",\r\n\t\"location\": \"NUS Utown\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favour",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favour"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.4 Post Single Favour",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"title\": \"Batman\",\r\n\t\"body\": \"Hi guys! I just lost my wallet in ERC and can't find it. Has anyone seen it or willing to help me find together?\",\r\n\t\"urgent\": true,\r\n\t\"category\": \"Casual\",\r\n\t\"poster\": \"augustinekau\",\r\n\t\"timestamp_due\": \"2021-12-25T04:59:35\",\r\n\t\"location\": \"NUS Utown\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/favour",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favour"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "376"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"178-L+m/m2H33FB6uD69P3m4mbo8zXE\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 08 Nov 2021 14:49:22 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Batman\",\n    \"body\": \"Hi guys! I just lost my wallet in ERC and can't find it. Has anyone seen it or willing to help me find together?\",\n    \"urgent\": true,\n    \"category\": \"Casual\",\n    \"poster\": \"alicetan\",\n    \"timestamp_posted\": \"2021-11-08T14:49:22.738Z\",\n    \"timestamp_due\": \"2021-12-24T20:59:35.000Z\",\n    \"location\": \"NUS Utown\",\n    \"completedBy\": null,\n    \"requestors\": [],\n    \"favour_id\": \"Rr7sVNOp6uvj6LAGOsqK\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2.5 Delete Favour",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favour/:favour_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favour",
+								":favour_id"
+							],
+							"variable": [
+								{
+									"key": "favour_id",
+									"value": "0N6Mj8j3otHzt8y0i5rj"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.3 Delete Favour",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/favour/:favour_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favour",
+										":favour_id"
+									],
+									"variable": [
+										{
+											"key": "favour_id",
+											"value": "fyOOhRO4jfDep6ekEZHT"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "28"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1c-j+EqozlbHRrjXayrBEaHPKE6UqA\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 10 Oct 2021 15:05:10 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Delete success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2.6 Edit Favour",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\": \"Edited body of test favour\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/favour/:favour_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favour",
+								":favour_id"
+							],
+							"variable": [
+								{
+									"key": "favour_id",
+									"value": "dtgZRL4lafGzbuUBmVk9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.4 Edit Favour",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"body\": \"Edited body of test favour\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/favour/:favour_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favour",
+										":favour_id"
+									],
+									"variable": [
+										{
+											"key": "favour_id",
+											"value": "dtgZRL4lafGzbuUBmVk9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "28"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1c-Nbu3ZwdE3RuySsQDiPLICSe9B0Q\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 10 Oct 2021 15:07:40 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Update success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2.7 Make Request to Favour",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1MjU1NWEyMjM3MWYxMGY0ZTIyZjFhY2U3NjJmYzUwZmYzYmVlMGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNTgzNzE4MCwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM1ODM3MTgwLCJleHAiOjE2MzU4NDA3ODAsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.LwqejUAtTu1bHpnpwHJDwZQX6XDyj-ATmgV8yXnQcQ1FIfOSUJcv3_lWLydRsmJf_-TyMo4THqZPkjhudZ53OIP8e9wzMpauzFmKxLvwkHoL33COzfovOKC-KKzUpyH9kWsB9Z5LjQJ8x--ScDMUacpeNwhnIosswXzoLeeZ4iXCcWSTnpyx_upXRWInyhvAlij0SXJuwDTy9yDkKzR7OIqY9TWy3cBM5s8v2cpkXwWx45C91LR0mliIWTux2198r4nqsKUl9eCJwqQM-2GbdTwQsf8XwqKN4ZeRQVlXVsjs4K15NV8fRVMMgxBI93nRVjt9sV3eoGg2t1na3Cy4JQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"I would like to help you :D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/request/:favour_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"request",
+								":favour_id"
+							],
+							"variable": [
+								{
+									"key": "favour_id",
+									"value": "0iNWHoNAfJVCyYzQUssk"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.7 Make Request to Favour",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\": \"I would like to help you :D\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/request/:favour_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"request",
+										":favour_id"
+									],
+									"variable": [
+										{
+											"key": "favour_id",
+											"value": "0iNWHoNAfJVCyYzQUssk"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "29"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1d-PQCMyGMWUYldlbbX1+JplA3jGw0\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 07:13:17 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Request success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2.8 Get Single Favour",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjE1MjU1NWEyMjM3MWYxMGY0ZTIyZjFhY2U3NjJmYzUwZmYzYmVlMGMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNTg3MjE5NiwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM1ODcyMTk2LCJleHAiOjE2MzU4NzU3OTYsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.OBWtdoSPLI5Fq4kJMm3faOXUXlINKHZkbWXN5RtpOsUQtemuOr4g36aG6rDDxiGFp_V4C7y61ch9_ovnHvZSlOtJ0kj8uRa6WfsO9c_0OFVmExc_pspUtGo4rHUO3k_HtqplKuw_nLZyt2TPTiOA1UpyghiCa9p21h-dVlUROztFKY25WesaqiacHslg8qWc6VwcWYd53akK2PLzH2Uf6zWlbI8T5QAwv0r2fhHF5Bb9co6PdNBL_Nw6bIe9pRrYz52435gwnKU0iOJwtHxlNvej7AjHhJbTIhEMPlm71TcSCuK3uuUkKh7Tz62POVJYUWEBfuvurlq2Oy_liuXltA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/get/:favourId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"get",
+								":favourId"
+							],
+							"variable": [
+								{
+									"key": "favourId",
+									"value": "0iNWHoNAfJVCyYzQUssk"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.8 Get Single Favour - No Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/get/:favourId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"get",
+										":favourId"
+									],
+									"variable": [
+										{
+											"key": "favourId",
+											"value": "0iNWHoNAfJVCyYzQUssk"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "443"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1bb-BSE10H2t5my1qP2KVW6H39ax7+g\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 16:55:51 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"favour_id\": \"0iNWHoNAfJVCyYzQUssk\",\n    \"title\": \"Help to buy lunch from Utown\",\n    \"body\": \"Hi guys! I'm feeling sick and cannot go to buy lunch. Is anyone free to help me dabao from food clique? Thanks! I live at PGP Block 13 :)\",\n    \"urgent\": true,\n    \"category\": \"Casual\",\n    \"poster\": \"jordanyoong\",\n    \"timestamp_posted\": \"Tue Nov 02 2021 13:00:00 GMT+0800 (Singapore Standard Time)\",\n    \"timestamp_due\": {\n        \"_seconds\": 1640392200,\n        \"_nanoseconds\": 0\n    },\n    \"location\": \"PGP Block 13\"\n}"
+						},
+						{
+							"name": "2.8 Get Single Favour - Requested",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/get/:favourId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"get",
+										":favourId"
+									],
+									"variable": [
+										{
+											"key": "favourId",
+											"value": "0iNWHoNAfJVCyYzQUssk"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "462"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1ce-jM6V10AYe/ZxiOuLAMazLSELU24\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 02 Nov 2021 16:56:49 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"favour_id\": \"0iNWHoNAfJVCyYzQUssk\",\n    \"title\": \"Help to buy lunch from Utown\",\n    \"body\": \"Hi guys! I'm feeling sick and cannot go to buy lunch. Is anyone free to help me dabao from food clique? Thanks! I live at PGP Block 13 :)\",\n    \"urgent\": true,\n    \"category\": \"Casual\",\n    \"poster\": \"jordanyoong\",\n    \"timestamp_posted\": \"Tue Nov 02 2021 13:00:00 GMT+0800 (Singapore Standard Time)\",\n    \"timestamp_due\": {\n        \"_seconds\": 1640392200,\n        \"_nanoseconds\": 0\n    },\n    \"location\": \"PGP Block 13\",\n    \"requestStatus\": -1\n}"
+						}
+					]
+				},
+				{
+					"name": "2.9 Accept request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjQ3MDE2OCwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM2NDcwMTY4LCJleHAiOjE2MzY0NzM3NjgsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.WM1d0TN1Yv-A3ucgU4-Dj6hMwCej2YP5RIodNEG3vyi3JSY3NlrJP2BiimVljfQdLjnTXfxmYuS8xJ5SmTGa9oavsYT0Whhi7mDLpLmtDC03bwHgFuBZ_leOUhO0VgjdE1LYx-YtqPBfgkEBXmgrw3qfoc31eBiyUvxVGWBz21WWDOYAfO_mjurejfLQaelxZSpPoTIerkV-eFNfm8iuDEUU_2gdwXm8htbmFchb1kOx0O8_qS1uErSfY_qyuBppsX4OISAEu9qfHjlx4PkwAks0dSzZEj4LZpZjFA0kBYEO4ZlKHhrSYUq-LWPI6kxeuSH1ByetDMUyllqC_-x5Tw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"requestor_username\": \"alicetan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accept_request/:favour_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accept_request",
+								":favour_id"
+							],
+							"variable": [
+								{
+									"key": "favour_id",
+									"value": "gk3SeOzp82TIf3NbGlXr"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.9 Accept request - Favour not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "2.9 Accept request - Unauthorised",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "2.9 Accept request - Requestor not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "2.9 Accept request - Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"requestor_username\": \"alicetan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/accept_request/:favour_id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"accept_request",
+										":favour_id"
+									],
+									"variable": [
+										{
+											"key": "favour_id",
+											"value": "gk3SeOzp82TIf3NbGlXr"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1e-TCIkuz0Y7DHT/sfR674lxuJ7YAU\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 09 Nov 2021 15:03:08 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Request accepted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2.10 Reject request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reject_request/:favour_id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reject_request",
+								":favour_id"
+							],
+							"variable": [
+								{
+									"key": "favour_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.10 Reject request - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "2.10 Reject request - Favour not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "2.10 Reject request - Unauthorised",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "2.10 Reject request - Requestor not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "2.11 Set Completed By",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjQ4MjQwNiwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM2NDgyNDA2LCJleHAiOjE2MzY0ODYwMDYsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.bFSEVHanlZ7ZhLPhicL1Jw-D9eCTgdr6g0VDJNLv8ESg4aVjn05w9-OHGLYS2Ivab6ljzaaeWNESJ1Q0GJvVyBvzwiCi7bRLIoNkQCz10gZvBVfR4wAK_fvY8AuH57jUQJ3GNA80xsYMM6j8mvj5eLNcn_Dn-9kzR4UsyPqlw9tFGhFZF5_OdeCTVP0kcC6FDnw7-lOrCaB0RRXo-E4NUWe9I4EzMREsa0HEUkKkvrYUmql6BRsNL30-aam3tJdZgh92myrDEsMieag9CKOZBAORxuAKcnkJtXn0oITRLpyLLPDgNZwY59VYAVx9on7xg9oBMPZSlySKR6OP2FSl2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"completedBy\": \"augustinekau\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/completed/:favourId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"completed",
+								":favourId"
+							],
+							"variable": [
+								{
+									"key": "favourId",
+									"value": "CnVC1SIvhUeG0NHm1Cte"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.11 Set Completed By",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"completedBy\": \"augustinekau\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/completed/:favourId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"completed",
+										":favourId"
+									],
+									"variable": [
+										{
+											"key": "favourId",
+											"value": "CnVC1SIvhUeG0NHm1Cte"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "30"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1e-XEUXUtbIz5pp4fIH5kkII6VuVA8\""
+								},
+								{
+									"key": "date",
+									"value": "Tue, 09 Nov 2021 18:27:10 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Favour completed\"\n}"
+						}
+					]
+				},
+				{
+					"name": "2.12 Get All Non-Expired Favours",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjMzNzI4NSwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzM3Mjg1LCJleHAiOjE2MzYzNDA4ODUsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.deIXHugOR0e0MmRIZiX9l3qiJLqUmXfKT7NlEsDGLkKE1P5Fu9PuW5R8FoZWGytMVmCWifV_uLcOKkKYokf9qal9X9YLa6i7jw-MdYNWVbyR9i1DYbtb5iAmI5Cy0q0pZEHFj_1MrOG3KPQgwyQqJbLPirWgxlA3DTn8h-IeYXXE3eigMBDGPoZpphFISoszJF4VtaFI5jodAC3fWrCUXSBgWy17FTFGm_cQco3B03Xm5DGlyOYVzD3viuprcbZafUigQf2YI729dx5ZrMadubcSwcse4RQlqVO2IY5XtZ5pwuDmHKNItFAO1WtdWgl1OymFwzezC-0c1FGvNIZnsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/nonExpired/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"nonExpired",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "alicetan"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.12 Get All Non-Expired Favours - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/nonExpired/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"nonExpired",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Non-expired favours retrieved successfully\",\r\n    \"favours\": [\r\n        {\r\n            \"favour_id\": \"bRdqZXPiT6d0e7F4y00f\",\r\n            \"title\": \"Help me 5\",\r\n            \"body\": \"need help walking my fish\",\r\n            \"urgent\": true,\r\n            \"category\": \"Casual\",\r\n            \"poster\": \"alicetan\",\r\n            \"timestamp_posted\": \"03/11/2021, 3:55:00 pm\",\r\n            \"timestamp_due\": \"11/08/2022, 12:00:00 am\",\r\n            \"location\": \"Hougang, Singapore\",\r\n            \"requestors\": [\r\n                {\r\n                    \"username\": \"suanne\",\r\n                    \"messages\": \"hello there\",\r\n                    \"isAccepted\": -1\r\n                },\r\n                {\r\n                    \"message\": \"i can help!\",\r\n                    \"isAccepted\": 0,\r\n                    \"username\": \"augustinekau\"\r\n                }\r\n            ],\r\n            \"completedBy\": null\r\n        },\r\n        {\r\n            \"favour_id\": \"0iNWHoNAfJVCyYzQUssk\",\r\n            \"title\": \"Help to buy lunch from Utown\",\r\n            \"body\": \"Hi guys! I'm feeling sick and cannot go to buy lunch. Is anyone free to help me dabao from food clique? Thanks! I live at PGP Block 13 :)\",\r\n            \"urgent\": true,\r\n            \"category\": \"Casual\",\r\n            \"poster\": \"alicetan\",\r\n            \"timestamp_posted\": \"02/11/2021, 12:00:00 pm\",\r\n            \"timestamp_due\": \"25/12/2021, 8:30:00 am\",\r\n            \"location\": \"PGP Block 13\",\r\n            \"requestors\": [\r\n                {\r\n                    \"username\": \"augustinekau\",\r\n                    \"message\": \"me\",\r\n                    \"isAccepted\": -1\r\n                },\r\n                {\r\n                    \"message\": \"I can help!\",\r\n                    \"username\": \"alicetan\",\r\n                    \"isAccepted\": \"1\"\r\n                }\r\n            ],\r\n            \"completedBy\": null\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "2.13 Get All Past Favours",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjMzNzI4NSwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzM3Mjg1LCJleHAiOjE2MzYzNDA4ODUsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.deIXHugOR0e0MmRIZiX9l3qiJLqUmXfKT7NlEsDGLkKE1P5Fu9PuW5R8FoZWGytMVmCWifV_uLcOKkKYokf9qal9X9YLa6i7jw-MdYNWVbyR9i1DYbtb5iAmI5Cy0q0pZEHFj_1MrOG3KPQgwyQqJbLPirWgxlA3DTn8h-IeYXXE3eigMBDGPoZpphFISoszJF4VtaFI5jodAC3fWrCUXSBgWy17FTFGm_cQco3B03Xm5DGlyOYVzD3viuprcbZafUigQf2YI729dx5ZrMadubcSwcse4RQlqVO2IY5XtZ5pwuDmHKNItFAO1WtdWgl1OymFwzezC-0c1FGvNIZnsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/past/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"past",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "alicetan"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.13 Get All Past Favours",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/past/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"past",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Past favours retrieved successfully\",\r\n    \"favours\": [\r\n        {\r\n            \"favour_id\": \"8JWiBWeRARHVvmollzyJ\",\r\n            \"title\": \"Need help with CS3219 Assignment\",\r\n            \"body\": \"Body of test favour\",\r\n            \"urgent\": false,\r\n            \"category\": \"Casual\",\r\n            \"poster\": \"alicetan\",\r\n            \"timestamp_posted\": \"06/11/2021, 7:44:00 am\",\r\n            \"timestamp_due\": \"06/01/2022, 3:00:00 am\",\r\n            \"location\": \"Sengkang\",\r\n            \"requestors\": [\r\n                {\r\n                    \"isAccepted\": 1,\r\n                    \"message\": \"I would like to help you :D\",\r\n                    \"username\": \"augustinekau\"\r\n                }\r\n            ],\r\n            \"completedBy\": \"augustinekau\"\r\n        },\r\n        {\r\n            \"favour_id\": \"Plv3H67jNQZouAghVBAk\",\r\n            \"title\": \"need help walking my fish\",\r\n            \"body\": \"i am too busy i am too busy i am too busy i am too busyi am too busy i am too busyi am too busyi am too busyi am too busy i am too busyi am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busyi am too busy i am too busyi am too busyi am too busyi am too busy i am too busyi am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy i am too busy\",\r\n            \"urgent\": true,\r\n            \"category\": \"Casual\",\r\n            \"poster\": \"alicetan\",\r\n            \"timestamp_posted\": \"28/10/2021, 9:41:00 am\",\r\n            \"timestamp_due\": \"01/01/2021, 8:00:00 am\",\r\n            \"location\": \"Nic house\",\r\n            \"requestors\": [],\r\n            \"completedBy\": null\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "2.14 Get All In Progress Favours",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjMzNzI4NSwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzM3Mjg1LCJleHAiOjE2MzYzNDA4ODUsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.deIXHugOR0e0MmRIZiX9l3qiJLqUmXfKT7NlEsDGLkKE1P5Fu9PuW5R8FoZWGytMVmCWifV_uLcOKkKYokf9qal9X9YLa6i7jw-MdYNWVbyR9i1DYbtb5iAmI5Cy0q0pZEHFj_1MrOG3KPQgwyQqJbLPirWgxlA3DTn8h-IeYXXE3eigMBDGPoZpphFISoszJF4VtaFI5jodAC3fWrCUXSBgWy17FTFGm_cQco3B03Xm5DGlyOYVzD3viuprcbZafUigQf2YI729dx5ZrMadubcSwcse4RQlqVO2IY5XtZ5pwuDmHKNItFAO1WtdWgl1OymFwzezC-0c1FGvNIZnsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/inProgress/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"inProgress",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "alicetan"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.14 Get All In Progress Favours - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/inProgress/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"inProgress",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"In-progress favours retrieved successfully\",\r\n    \"favours\": [\r\n        {\r\n            \"favour_id\": \"0iNWHoNAfJVCyYzQUssk\",\r\n            \"title\": \"Help to buy lunch from Utown\",\r\n            \"body\": \"Hi guys! I'm feeling sick and cannot go to buy lunch. Is anyone free to help me dabao from food clique? Thanks! I live at PGP Block 13 :)\",\r\n            \"urgent\": true,\r\n            \"category\": \"Casual\",\r\n            \"poster\": \"jordanyoong\",\r\n            \"timestamp_posted\": \"02/11/2021, 12:00:00 pm\",\r\n            \"timestamp_due\": \"07/11/2021, 8:30:00 am\",\r\n            \"location\": \"PGP Block 13\",\r\n            \"requestors\": [\r\n                {\r\n                    \"message\": \"me\",\r\n                    \"username\": \"augustinekau\",\r\n                    \"isAccepted\": -1\r\n                },\r\n                {\r\n                    \"message\": \"I can help!\",\r\n                    \"isAccepted\": \"1\",\r\n                    \"username\": \"alicetan\"\r\n                }\r\n            ],\r\n            \"completedBy\": null\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "2.15 Get All Favours Completed By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjMzNzI4NSwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MzM3Mjg1LCJleHAiOjE2MzYzNDA4ODUsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.deIXHugOR0e0MmRIZiX9l3qiJLqUmXfKT7NlEsDGLkKE1P5Fu9PuW5R8FoZWGytMVmCWifV_uLcOKkKYokf9qal9X9YLa6i7jw-MdYNWVbyR9i1DYbtb5iAmI5Cy0q0pZEHFj_1MrOG3KPQgwyQqJbLPirWgxlA3DTn8h-IeYXXE3eigMBDGPoZpphFISoszJF4VtaFI5jodAC3fWrCUXSBgWy17FTFGm_cQco3B03Xm5DGlyOYVzD3viuprcbZafUigQf2YI729dx5ZrMadubcSwcse4RQlqVO2IY5XtZ5pwuDmHKNItFAO1WtdWgl1OymFwzezC-0c1FGvNIZnsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/completed/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"completed",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "augustinekau"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.15 Get All Favours Completed By User - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/completed/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"completed",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "alicetan"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"message\": \"Retrieved favours completed by user successfully\",\r\n    \"favours\": [\r\n        {\r\n            \"favour_id\": \"2PYnQSnlG8QG6E74Gx0e\",\r\n            \"title\": \"Need a ride home ASAP\",\r\n            \"body\": \"Description test\",\r\n            \"urgent\": true,\r\n            \"category\": \"Casual\",\r\n            \"poster\": \"jordanyoong\",\r\n            \"timestamp_posted\": \"04/11/2021, 3:45:00 am\",\r\n            \"timestamp_due\": \"01/12/2021, 4:00:00 pm\",\r\n            \"location\": \"Bedok, Singapore\",\r\n            \"requestors\": [\r\n                {\r\n                    \"isAccepted\": 1,\r\n                    \"username\": \"alicetan\",\r\n                    \"message\": \"I can drive you\"\r\n                }\r\n            ],\r\n            \"completedBy\": \"alicetan\"\r\n        },\r\n        {\r\n            \"favour_id\": \"0m01jNNWNXfOGXMfKsCC\",\r\n            \"title\": \"Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\r\n            \"body\": \"Body of test favour. Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3 Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\r\n            \"urgent\": false,\r\n            \"category\": \"Professional\",\r\n            \"poster\": \"augustinekau\",\r\n            \"timestamp_posted\": \"03/11/2021, 12:30:00 pm\",\r\n            \"timestamp_due\": \"31/12/2021, 12:00:00 pm\",\r\n            \"location\": \"UTown\",\r\n            \"requestors\": [\r\n                {\r\n                    \"username\": \"alicetan\",\r\n                    \"message\": \"I want to help more!\",\r\n                    \"isAccepted\": 1\r\n                }\r\n            ],\r\n            \"completedBy\": \"alicetan\"\r\n        },\r\n        {\r\n            \"favour_id\": \"fJrUI268EnI1c7RjeUxi\",\r\n            \"title\": \"Help me sample my music\",\r\n            \"body\": \"Ï'm embarking on a new album release\",\r\n            \"urgent\": true,\r\n            \"category\": \"Professional\",\r\n            \"poster\": \"feliciathegoat\",\r\n            \"timestamp_posted\": \"02/11/2021, 11:23:56 pm\",\r\n            \"timestamp_due\": \"06/04/2022, 12:00:00 am\",\r\n            \"location\": \"Yonkers, New York\",\r\n            \"requestors\": [\r\n                {\r\n                    \"message\": \"I want to help!\",\r\n                    \"username\": \"alicetan\",\r\n                    \"isAccepted\": 1\r\n                }\r\n            ],\r\n            \"completedBy\": \"alicetan\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "2.16 Get All Casual Favours (Sort by Deadline)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/casual/sort_due",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"casual",
+								"sort_due"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.16 Get All Casual Favours (Sort by Deadline)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/casual/sort_due",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"casual",
+										"sort_due"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "1773"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"6ed-4t2c88OkUfO6RelpJfyCli7wqU0\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 08 Nov 2021 11:51:19 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"favour_id\": \"zuvK2zKGQVjdVfcDw5lR\",\n        \"title\": \"I can't find my wallet\",\n        \"body\": \"Hi guys! I just lost my wallet in ERC and can't find it. Has anyone seen it or willing to help me find together?\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"augustinekau\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1636088198,\n            \"_nanoseconds\": 128000000\n        },\n        \"timestamp_due\": \"Thu Nov 18 2021 15:40:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"NUS Utown\"\n    },\n    {\n        \"favour_id\": \"CnVC1SIvhUeG0NHm1Cte\",\n        \"title\": \"Finding finals mugging buddies\",\n        \"body\": \"Hi I am a CS Student in need of a study buddy to study tgt for finals, hit me up :D\",\n        \"urgent\": false,\n        \"category\": \"Casual\",\n        \"poster\": \"augustinekau\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1636088375,\n            \"_nanoseconds\": 480000000\n        },\n        \"timestamp_due\": \"Sat Nov 20 2021 08:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"SOC\"\n    },\n    {\n        \"favour_id\": \"2PYnQSnlG8QG6E74Gx0e\",\n        \"title\": \"Need a ride home ASAP\",\n        \"body\": \"Description test\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"jordanyoong\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1635968700,\n            \"_nanoseconds\": 0\n        },\n        \"timestamp_due\": \"Wed Dec 01 2021 16:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Bedok, Singapore\"\n    },\n    {\n        \"favour_id\": \"8JWiBWeRARHVvmollzyJ\",\n        \"title\": \"Need help with CS3219 Assignment\",\n        \"body\": \"Body of test favour\",\n        \"urgent\": false,\n        \"category\": \"Casual\",\n        \"poster\": \"alicetan\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1636155840,\n            \"_nanoseconds\": 0\n        },\n        \"timestamp_due\": \"Thu Jan 06 2022 03:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Sengkang\"\n    },\n    {\n        \"favour_id\": \"bRdqZXPiT6d0e7F4y00f\",\n        \"title\": \"Help me 5\",\n        \"body\": \"need help walking my fish\",\n        \"urgent\": true,\n        \"category\": \"Casual\",\n        \"poster\": \"alicetan\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1635926100,\n            \"_nanoseconds\": 0\n        },\n        \"timestamp_due\": \"Thu Aug 11 2022 00:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Hougang, Singapore\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "2.17 Get All Professional Favours (Sort by Deadline)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/favours/professional/sort_due",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"favours",
+								"professional",
+								"sort_due"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "2.17 Get All Professional Favours (Sort by Deadline)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/favours/professional/sort_due",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"favours",
+										"professional",
+										"sort_due"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "2439"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"987-Bm9EaRgqr86SlbSfG6qTUPPFBaA\""
+								},
+								{
+									"key": "date",
+									"value": "Mon, 08 Nov 2021 11:51:54 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"favour_id\": \"dgP7VOjFFFBrVC86WoCm\",\n        \"title\": \"Just learnt to bake! Help to taste :)\",\n        \"body\": \"Body of test favour\",\n        \"urgent\": true,\n        \"category\": \"Professional\",\n        \"poster\": \"augustinekau\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1636005635,\n            \"_nanoseconds\": 0\n        },\n        \"timestamp_due\": \"Tue Nov 30 2021 00:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Sengkang\"\n    },\n    {\n        \"favour_id\": \"dtgZRL4lafGzbuUBmVk9\",\n        \"title\": \"Sleep research. Need volunteer to help to sleep \",\n        \"body\": \"Edited body of test favour\",\n        \"urgent\": true,\n        \"category\": \"Professional\",\n        \"poster\": \"sarah w.\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1635936224,\n            \"_nanoseconds\": 0\n        },\n        \"timestamp_due\": \"Wed Dec 08 2021 16:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Sengkang\"\n    },\n    {\n        \"favour_id\": \"0m01jNNWNXfOGXMfKsCC\",\n        \"title\": \"Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\n        \"body\": \"Body of test favour. Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3 Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3Coffee tasting and give feedback so that I can improve. Please please! It is free and it taste good. Guarantee safe to drink! Contact me nowwww. Ask your friends to join also! The more the better. Sharing is caring <3\",\n        \"urgent\": false,\n        \"category\": \"Professional\",\n        \"poster\": \"augustinekau\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1635913800,\n            \"_nanoseconds\": 0\n        },\n        \"timestamp_due\": \"Fri Dec 31 2021 12:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"UTown\"\n    },\n    {\n        \"favour_id\": \"fJrUI268EnI1c7RjeUxi\",\n        \"title\": \"Help me sample my music\",\n        \"body\": \"Ï'm embarking on a new album release\",\n        \"urgent\": true,\n        \"category\": \"Professional\",\n        \"poster\": \"feliciathegoat\",\n        \"timestamp_posted\": {\n            \"_seconds\": 1635866636,\n            \"_nanoseconds\": 762000000\n        },\n        \"timestamp_due\": \"Wed Apr 06 2022 00:00:00 GMT+0800 (Singapore Standard Time)\",\n        \"location\": \"Yonkers, New York\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "3. Chats",
+			"item": [
+				{
+					"name": "3.1 Post Single Chat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjI1OTczNiwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM2MjU5NzM2LCJleHAiOjE2MzYyNjMzMzYsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.AYFs9lPtlcME82_G0nis0y1_U6WHhB4x5OkfKrAN7FHB4LNax_4SDnoxyb2MA_cxjqg8UwOs4jyEB17kblzihfKbBQEIhIZwwY7wO4zvtIoV5IMu3TCUZ0R0HsnKBu6HZXDiN4BK82o8LMDPlCplg8DOiHjZFxQEQDU5_khRrYnSwUw9Dwn2w-Xxuuuaad4GKjoo5SZvnCrE4k4dIniQelXUOPTMeu6L3Q2FplDRGhg0yQbtUJBhYzt4JsVXlf2spHIWV-jo5OkaRYoRC2vo1wJQ1Tg3OuTj1ld6FZKIjcU15E7SPRb9I7cfLmYsv5J28N-g2nD0ueIkj39FogoT7A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiver\": \"jordanyoong\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/chats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "3.1 Post Single Chat - Exisiting Chat Exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"receiver\": \"jordanyoong\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/chats",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"chats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "493"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1ed-LguY3AMVRoek39cb6Cx1fgUv8Ew\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 07 Nov 2021 04:35:57 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Chat retrieved successfully\",\n    \"chatId\": \"augustinekau-jordanyoong\",\n    \"body\": {\n        \"parties\": [\n            \"augustinekau\",\n            \"jordanyoong\"\n        ],\n        \"messages\": [\n            {\n                \"sender\": \"augustinekau\",\n                \"message\": \"oh ok fix le nvm\",\n                \"time_sent\": \"06/11/2021, 1:17:49 am\"\n            },\n            {\n                \"sender\": \"augustinekau\",\n                \"message\": \"what was that\",\n                \"time_sent\": \"06/11/2021, 1:16:21 am\"\n            },\n            {\n                \"sender\": \"augustinekau\",\n                \"message\": \"hey yo whatsup\",\n                \"time_sent\": \"06/11/2021, 1:16:10 am\"\n            },\n            {\n                \"sender\": \"jordanyoong\",\n                \"message\": \"yo sup\",\n                \"time_sent\": \"05/11/2021, 12:00:00 pm\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "3.1 Post Single Chat - Create New Chat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"receiver\": \"feliciathegoat\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/chats",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"chats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "165"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"a5-wF1GAvk11C/w2t5DnMnJrfgiF1o\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 07 Nov 2021 04:37:59 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"New chat created!\",\n    \"chatId\": \"augustinekau-feliciathegoat\",\n    \"body\": {\n        \"parties\": [\n            \"augustinekau\",\n            \"feliciathegoat\"\n        ],\n        \"most_recent_activity\": null,\n        \"messages\": []\n    }\n}"
+						},
+						{
+							"name": "3.1 Post Single Chat - Invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"receiver\": \"newguy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/chats",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"chats"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "27"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"1b-zwbVn+khKPCopwPWMSZv5g7j0gg\""
+								},
+								{
+									"key": "date",
+									"value": "Sun, 07 Nov 2021 04:53:42 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Invalid receiver username\""
+						}
+					]
+				},
+				{
+					"name": "3.2 Send Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjExMjA1NiwidXNlcl9pZCI6IkJFdXpKREdBbkhoU0N2czNNRm5lV0I0c2Z0czEiLCJzdWIiOiJCRXV6SkRHQW5IaFNDdnMzTUZuZVdCNHNmdHMxIiwiaWF0IjoxNjM2MTEyMDU2LCJleHAiOjE2MzYxMTU2NTYsImVtYWlsIjoiYWxpY2V0YW5AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImFsaWNldGFuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.Oc1M3BwJ_EAZFh0eYN7vm24_Rasv44TkFk88_peuYVs8QL0vGCInS1f-dYnEyRp3EU25NlzB1dPY43XaZUfZi-XqN2JjZcgn8JwR1BNajY80MjnnPeGax3kk6Q1qcn4AmlLqnYLo1MvYES0Tq56j-328arR_Ws8TV0Z4FSa8239OaTCBeNjOaPXaH0obdjv5XU-stvOiOmSi5CvFa8drAw9NxzlxZQmbxvoC3j7kkhd1qylVbVt0s9oYfu5F_N4y1e5Gc1KL63C95JNAJQygz15b3mbzrLWiVYOIqQIuKtdySNwMdC2POwNmvtusLPVfsJQXxp-qLTxNwYjQU0UOFg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/chats/:chatId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats",
+								":chatId"
+							],
+							"variable": [
+								{
+									"key": "chatId",
+									"value": "alicetan-augustinekau"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "3.2 Send Message - Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\": \"hello\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/chats/:chatId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"chats",
+										":chatId"
+									],
+									"variable": [
+										{
+											"key": "chatId",
+											"value": "alicetan-augustinekau"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"response\": \"Message sent successfully and most recent activity updated\",\r\n    \"messages\": [\r\n        {\r\n            \"sender\": \"alicetan\",\r\n            \"message\": \"hello\",\r\n            \"time_sent\": \"05/11/2021, 7:43:19 pm\"\r\n        },\r\n        {\r\n            \"sender\": \"alicetan\",\r\n            \"message\": \"hello\",\r\n            \"time_sent\": \"05/11/2021, 6:37:43 pm\"\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "3.3 Get all Chats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjY5NGNmYTAxOTgyMDNlMjgwN2Q4MzRkYmE2MjBlZjczZjI4ZTRlMmMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZmF2b3VyczR1bmkiLCJhdWQiOiJmYXZvdXJzNHVuaSIsImF1dGhfdGltZSI6MTYzNjExNzA4MCwidXNlcl9pZCI6IldySXFhTmtjTDloaURLWUJKOERCYjNiYWpJczEiLCJzdWIiOiJXcklxYU5rY0w5aGlES1lCSjhEQmIzYmFqSXMxIiwiaWF0IjoxNjM2MTE3MDgwLCJleHAiOjE2MzYxMjA2ODAsImVtYWlsIjoiYXVndXN0aW5lQGthdS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYXVndXN0aW5lQGthdS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.Tk96XctNEKyItv7II3AsKAViI6OjQaTYstobFCcMBggiE580PnyxTWTdecghcVWdNE1RMue6ylg6udr-oso5MSrY-OQbFwBYVXrJeC9zqKx4-U24NGFQqMDYQOVA1PdeAoCAChqNV1MgqRiV16ZOT1ng61QOTzQ9bZ_Pdbzs7nSVjWVPUYKSK-1qTFHgpm6IlDCL3_Qtekl1S09yvKjJQyaTWrwfCVgIaP4FLCbHLWPoeMFhE9zcjlwaTFHa1eZmQh9jxBA7nDXB2Bv3xS54Zq5TE5GzzGgDvfWDlbNaAlh5uhRiNXGPWZlz_CFJsOEtyE55kAFpGuS3Lh8VfBOwXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/chats/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"chats",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "augustinekau"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "3.3 Get all Chats - Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/chats/:username",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"chats",
+										":username"
+									],
+									"variable": [
+										{
+											"key": "username",
+											"value": "augustinekau"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "access-control-allow-origin",
+									"value": "*"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "1297"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"511-J0v9HkkeYJOr3kZ9bAaqYqxKUlk\""
+								},
+								{
+									"key": "date",
+									"value": "Fri, 05 Nov 2021 13:09:43 GMT"
+								},
+								{
+									"key": "connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "keep-alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": \"All chats retrieved successfully!\",\n    \"chats\": [\n        {\n            \"chatId\": \"alicetan-augustinekau\",\n            \"most_recent_activity\": \"05/11/2021, 8:18:32 pm\",\n            \"parties\": [\n                \"alicetan\",\n                \"augustinekau\"\n            ],\n            \"messages\": [\n                {\n                    \"sender\": \"alicetan\",\n                    \"time\": \"05/11/2021, 8:18:32 pm\",\n                    \"message\": \"show message\"\n                },\n                {\n                    \"time\": \"05/11/2021, 7:54:49 pm\",\n                    \"message\": \"hello\",\n                    \"sender\": \"alicetan\"\n                },\n                {\n                    \"sender\": \"alicetan\",\n                    \"time\": \"05/11/2021, 7:54:46 pm\",\n                    \"message\": \"hello\"\n                },\n                {\n                    \"message\": \"hello\",\n                    \"time\": \"05/11/2021, 7:54:44 pm\",\n                    \"sender\": \"alicetan\"\n                },\n                {\n                    \"time\": \"05/11/2021, 7:54:40 pm\",\n                    \"message\": \"show message\",\n                    \"sender\": \"alicetan\"\n                },\n                {\n                    \"time\": \"05/11/2021, 7:54:32 pm\",\n                    \"message\": \"show message\",\n                    \"sender\": \"alicetan\"\n                },\n                {\n                    \"message\": \"hello\",\n                    \"sender\": \"alicetan\",\n                    \"time\": \"05/11/2021, 7:54:05 pm\"\n                },\n                {\n                    \"sender\": \"alicetan\",\n                    \"time\": \"05/11/2021, 7:53:51 pm\",\n                    \"message\": \"testing\"\n                },\n                {\n                    \"sender\": \"alicetan\",\n                    \"message\": \"hello\",\n                    \"time\": \"05/11/2021, 7:45:50 pm\"\n                },\n                {\n                    \"sender\": \"alicetan\",\n                    \"message\": \"hello\",\n                    \"time\": \"05/11/2021, 7:44:37 pm\"\n                },\n                {\n                    \"time\": \"05/11/2021, 7:43:19 pm\",\n                    \"sender\": \"alicetan\",\n                    \"message\": \"hello\"\n                },\n                {\n                    \"sender\": \"alicetan\",\n                    \"message\": \"hello\",\n                    \"time\": \"05/11/2021, 6:37:43 pm\"\n                }\n            ]\n        },\n        {\n            \"chatId\": \"augustinekau-jordanyoong\",\n            \"most_recent_activity\": \"05/11/2021, 12:00:00 pm\",\n            \"parties\": [\n                \"augustinekau\",\n                \"jordanyoong\"\n            ],\n            \"messages\": [\n                {\n                    \"sender\": \"jordanyoong\",\n                    \"time\": \"05/11/2021, 12:00:00 pm\",\n                    \"message\": \"yo sup\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

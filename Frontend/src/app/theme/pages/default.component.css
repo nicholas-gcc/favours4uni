@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    width: 10%; 
+    max-width: 200px;
+    min-width: 100px;
+    min-height: 100vh; 
+    height: 63rem;
+    float:left;
+  }
+
+.side-nav {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.main-content {
+    height: 100vh;
+    background-color: #FCE0D6;
+    box-shadow: 0px 10px 0px 800px #FCE0D6;
+    padding: 40px;
+    padding-left: 200px;
+}

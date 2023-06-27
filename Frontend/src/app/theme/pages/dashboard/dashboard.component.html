@@ -1,0 +1,641 @@
+<i *ngIf="!isLoggedIn || !this.currentUser.imageUrl" class="material-icons profile" [routerLink]="['/', 'profile']" >person</i>
+<img *ngIf="isLoggedIn && this.currentUser.imageUrl" class="profile-pic profile" [routerLink]="['/', 'profile']" [src]="this.currentUser.imageUrl">
+<span *ngIf="!isLoggedIn" [routerLink]="['/', 'login']" class="login-text"><u>Login / Signup</u></span>
+<span *ngIf="isLoggedIn && this.currentUser.imageUrl" class="logout-text" (click)="logout()"><u>Logout</u></span>
+<span *ngIf="isLoggedIn && !this.currentUser.imageUrl" class="login-text" (click)="logout()"><u>Logout</u></span>
+<br>
+<div *ngIf="!isLoggedIn" class="Futura-Font text-float">Make a difference today 🌻</div>
+<div *ngIf="isLoggedIn" class="Futura-Font text-float">Make a difference today, {{ this.currentUser.username }} 🌻</div>
+
+<i *ngIf="isLoggedIn" class="material-icons chat-btn" title="chat" [routerLink]="['/', 'message']" >chat</i>
+
+
+<div class="big-area">
+    <div class="row half-area">
+        <div class="left-arrow" id="casualBack" type="button">
+            <i *ngIf="hasPreviousPage" class="material-icons" (click)="casualPreviousPage()">arrow_back_ios</i>
+            <i *ngIf="!hasPreviousPage" class="material-icons hide-arrow">arrow_back_ios</i>
+        </div>
+
+        <div class="row middle-cards-area">
+            <!-- first card blank  -->
+            <div *ngIf="displayData[0].title == ''"  id="first-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- first card with info  -->            
+            <div *ngIf="!(displayData[0].title == '')" id="first-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Casual</div>
+                    <div class="col-9 outer-card transform" (click)="openModal(0)">
+                        <div class="inner-card">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayData[0].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayData[0].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayData[0].location || '-' }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayData[0].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayData[0].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayData[0].poster }}
+                            <br>
+                            {{ displayData[0].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second card blank  -->
+            <div *ngIf="displayData[1].title == ''" id="second-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second card with info  -->
+            <div *ngIf="!(displayData[1].title == '')" id="second-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Casual</div>
+                    <div class="col-9 outer-card" (click)="openModal(1)">
+                        <div class="inner-card">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayData[1].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayData[1].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayData[1].location }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayData[1].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayData[1].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayData[1].poster }}
+                            <br>
+                            {{ displayData[1].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- third card blank  -->
+            <div *ngIf="displayData[2].title == ''"  id="third-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- third card with info  -->
+            <div *ngIf="!(displayData[2].title == '')" id="third-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Casual</div>
+                    <div class="col-9 outer-card" (click)="openModal(2)">
+                        <div class="inner-card">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayData[2].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayData[2].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayData[2].location }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayData[2].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayData[2].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayData[2].poster }}
+                            <br>
+                            {{ displayData[2].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- forth card blank  -->
+            <div *ngIf="displayData[3].title == ''" id="forth-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- forth card with info  -->
+            <div *ngIf="!(displayData[3].title == '')" id="forth-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Casual</div>
+                    <div class="col-9 outer-card" (click)="openModal(3)">
+                        <div class="inner-card">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayData[3].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayData[3].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayData[3].location }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayData[3].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayData[3].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayData[3].poster }}
+                            <br>
+                            {{ displayData[3].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-arrow" style="width: 20px; padding-bottom: 45px !important;" id="casualNext" type="button">
+            <i class="col material-icons sort-btn" title="Toggle Sort" (click)="sort()">sort</i>
+            <i *ngIf="hasNextPage"class="col material-icons" (click)="casualNextPage()">arrow_forward_ios</i>
+            <i *ngIf="!hasNextPage" class="col material-icons hide-arrow">arrow_forward_ios</i>
+        </div>
+    </div>
+
+
+    <div class="row half-area">
+        <div class="left-arrow">
+            <i  *ngIf="hasPreviousProPage" class="material-icons" (click)="proPreviousProPage()">arrow_back_ios</i>
+            <i *ngIf="!hasPreviousProPage" class="material-icons hide-arrow">arrow_back_ios</i>
+        </div>
+
+        <div class="row middle-cards-area">
+            <!-- first card blank  -->
+            <div *ngIf="displayProData[0].title == ''"  id="first-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- first card with info  -->    
+            <div *ngIf="!(displayProData[0].title == '')" id="first-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Professional</div>
+                    <div class="col-9 outer-card" (click)="openModal(4)">
+                        <div class="inner-card-professional">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayProData[0].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayProData[0].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayProData[0].location || '-' }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayProData[0].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayProData[0].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayProData[0].poster }}
+                            <br>
+                            {{ displayProData[0].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second card blank  -->
+            <div *ngIf="displayProData[1].title == ''" id="second-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second card with info  -->
+            <div *ngIf="!(displayProData[1].title == '')" id="second-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Professional</div>
+                    <div class="col-9 outer-card" (click)="openModal(5)">
+                        <div class="inner-card-professional">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayProData[1].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayProData[1].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayProData[1].location }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayProData[1].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayProData[1].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayProData[1].poster }}
+                            <br>
+                            {{ displayProData[1].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- third card blank  -->
+            <div *ngIf="displayProData[2].title == ''" id="third-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- third card with info  -->
+            <div *ngIf="!(displayProData[2].title == '')" id="third-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Professional</div>
+                    <div class="col-9 outer-card" (click)="openModal(6)">
+                        <div class="inner-card-professional">
+                            <div class="row full-height">
+                                <div class="col-10">
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayProData[2].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayProData[2].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayProData[2].location }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayProData[2].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayProData[2].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayProData[2].poster }}
+                            <br>
+                            {{ displayProData[2].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- forth card blank  -->
+            <div *ngIf="displayProData[3].title == ''" id="forth-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text"></div>
+                    <div class="col-9 empty-outer-card">
+                        <div class="empty-inner-card">
+                            <div class="row full-height">
+                                <div class="empty-card-title">
+                                    <i>No more favours to show D:</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- forth card with info  -->
+            <div *ngIf="!(displayProData[3].title == '')" id="forth-card" class="col-3 card-area">
+                <div class="row full-height">
+                    <div class="col-1 rotate-text">Professional</div>
+                    <div class="col-9 outer-card" (click)="openModal(7)">
+                        <div class="inner-card-professional">
+                            <div class="row full-height">
+                                <div class="col-10" >
+                                    <div class="card-title overflow-title">
+                                        <span>{{ displayProData[3].title }}</span>
+                                    </div>
+                                    <div class="time-remaining-badge">
+                                        {{ displayProData[3].deadlineLeft }}
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                                        <div>
+                                            {{ displayProData[3].location }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">access_time</i>
+                                        <div>
+                                            {{ displayProData[3].deadline }}
+                                        </div>
+                                    </div>
+                                    <div class="card-details-text">
+                                        <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                                        <div>
+                                            {{ displayProData[3].isUrgent }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" >
+                                    <div class="colon">
+                                        :
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-posted-by">
+                            {{ displayProData[3].poster }}
+                            <br>
+                            {{ displayProData[3].postedAgo }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-arrow">
+            <i *ngIf="hasNextProPage" class="material-icons" (click)="proNextPage()">arrow_forward_ios</i>
+            <i *ngIf="!hasNextProPage" class="material-icons hide-arrow">arrow_forward_ios</i>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="cardDetailsModal" tabindex="-1" role="dialog" aria-labelledby="cardDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 45%;">
+      <div class="modal-content" [ngClass]="isModalCasual == true ? 'modal-card' : 'modal-card-professional'">
+        <div class="modal-header">
+          <div class="modal-title row" id="cardModalCenteredLabel">
+              <span class="modal-title-text">{{ displayModal.title }}</span>
+              <div class="modal-date-font">
+                <br>
+                ───
+                {{ displayModal.deadline }}
+              </div>
+            <div class="time-remaining-badge" style="margin: 2% 0 0 2%;">
+                {{ displayModal.deadlineLeft }}
+            </div>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" [ngClass]="isRequesting == 'request' ? 'modal-body-height-req' : 'modal-body-height'">
+            <div class="modal-body-text">{{ displayModal.body }}</div>
+            <div class="card-details-text" style="margin-top: 50px;">
+                <i class="material-icons" style="margin-right: 10px;">location_on</i>
+                <div>
+                    {{ displayModal.location }}
+                </div>
+            </div>
+            <div class="card-details-text">
+                <i class="material-icons" style="margin-right: 10px;">wb_twighlight</i>
+                <div>
+                    {{ displayModal.isUrgent }}
+                </div>
+            </div>
+            <div *ngIf="isRequesting == 'request'">
+                <input (keyup)="onKeyMessage($event)" class="message-box" type="text" maxlength="40" placeholder="Type a message for the requestor ...">
+            </div>
+        </div>
+        <div class="modal-footer row justify-content-between">
+            <div *ngIf="displayModal?.poster == currentUser?.username" class="btn btn-primary requested-button">
+                Posted
+            </div>
+            <div *ngIf="isRequesting == 'view' && displayModal?.poster != currentUser?.username" [ngClass]="isLoggedIn? 'request-button' : 'request-button-not-logged'" class="btn btn-primary" (click)="onRequest()">
+                Request
+            </div>
+            <span *ngIf="!isLoggedIn" class="please-login" >
+                <i>Please login to request for a favour</i>
+            </span>
+            <div *ngIf="isRequesting == 'request'" style="margin-bottom: 40px;">
+                <div class="btn btn-success send-button" (click)="onSend()">
+                    Send
+                </div>
+                <div class="btn btn-danger send-button" (click)="onCancel()">
+                    Cancel
+                </div>
+            </div>
+            <div *ngIf="isRequesting == 'requested'" class="btn btn-metal requested-button">
+                Requested
+            </div>
+            <div *ngIf="isRequesting == 'rejected'" class="btn btn-danger rejected-button">
+                Rejected
+            </div>
+            <div *ngIf="isRequesting == 'accepted'" class="btn btn-success accepted-button">
+                Accepted
+            </div>
+            <i class="material-icons modal-down-arrow">keyboard_arrow_down</i>
+            <div class="row" (click)="onRouteMsg()">
+                <div class="modal-posted-by" title="Message" (click)="onRouteMsg()">
+                    {{ displayModal.poster }}
+                    <br>
+                    {{ displayModal.postedAgo }}
+                </div>
+                <img class="modal-chat-dp" [src]="displayModal.url" title="View Profile" (click)="onRouteProfile()">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

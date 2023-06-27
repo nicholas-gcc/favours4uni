@@ -1,0 +1,6 @@
+<ng-container *ngFor="let p of pages">
+    <button type="button" [routerLink]="['/', p.path]" class="btn btn-circle btn-xl mat-elevation-z8" title="{{ p.title }}">
+        <i class="material-icons"> {{ p.icon }} </i>
+    </button>
+    <br>
+</ng-container>

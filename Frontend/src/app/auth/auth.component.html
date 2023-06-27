@@ -1,0 +1,46 @@
+<div class="back-arrow" [routerLink]="['/', 'dashboard']">
+    <ng-lottie 
+        [options]="backlottie" 
+        [routerLink]="['/', 'dashboard']">
+    </ng-lottie>
+    <p class="back-text">Back</p>
+</div>
+
+<div class="row central">
+    <div class="outer-card-login">
+        <div class="inner-card-login">
+            <div class="full-height-login">
+                <div class="card-title-login row-middle-login">
+                    Favours 4 Uni Login
+                </div>
+                <div class="welcome-text">
+                    Welcome! Please enter your login details!
+                </div>
+                <div class="input-boxes">
+                    <input (keyup)="onKeyEmail($event)" class="box" [ngClass]="hasValidationError? 'username-box-error' : 'username-box'"
+                        type="text" placeholder="Email">
+                    <input (keyup)="onKeyPassword($event)" class="box" [ngClass]="hasValidationError? 'username-box-error' : 'username-box'"
+                        type="password" placeholder="Password">
+                </div>
+                <div *ngIf="hasValidationError" class="login-error">
+                    <p>Invalid account/password</p>
+                </div>
+                <div class="forget-password">
+                    <!-- <u style="cursor: pointer;">Forget password?</u> -->
+                </div>
+                
+                <div class="login-badge" (click)="login()">
+                    Login
+                    <div *ngIf="isLoading" class="loader"></div>
+                </div>
+                <div class="forget-password">
+                    <u style="cursor: pointer;" [routerLink]="['/', 'login', 'register']">New User?</u>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-lottie 
+    [options]="heartlottie" 
+    class="heart-lottie">
+</ng-lottie>

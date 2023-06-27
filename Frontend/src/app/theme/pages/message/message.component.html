@@ -1,0 +1,72 @@
+<img *ngIf="this.currentUser.imageUrl" class="profile-pic profile" [routerLink]="['/', 'profile']" [src]="this.currentUser.imageUrl">
+<span *ngIf="this.currentUser.imageUrl" class="logout-text" (click)="logout()"><u>Logout</u></span>
+<span *ngIf="!this.currentUser.imageUrl" class="login-text" (click)="logout()"><u>Logout</u></span>
+<i class="material-icons chat-msg" title="chat" [routerLink]="['/', 'dashboard']" >chat</i>
+
+<div class="big-area-msg">
+    <div class="card-area-msg">
+        <div class="row full-height-msg" style="float: right;">
+            <div class="row outer-card-msg">
+                <div class="col-3 user-chat-area">
+                    <div class="row message-word-area">
+                        <div class="message-header">Messages
+                            <i class="material-icons" >chat</i>
+                        </div>
+                    </div>
+                    <div *ngFor="let m of allChat; let i = index">
+                        <div class="row" [ngClass]="viewIndex == i? 'user-chat-selected' : 'user-chat'" (click)="onClickChat(i)">
+                            <div class="col-3 m-auto">
+                                <img class="chat-dp" [src]="m.url">
+                            </div>
+                            <div class="col-9 user-preview">
+                                <div class="msg-preview-area">
+                                    <div class="chat-name">{{ m.parties[0] }}</div>
+                                    <div class="row chat-preview-msg">
+                                        <div class="col-10 ellipsis">
+                                            <span *ngIf="m.messages[0]?.sender == this.currentUser.username">You: </span>
+                                            <span>{{ m.messages[0]?.message }}</span>
+                                        </div>
+                                        <div *ngIf="m.messages[0]?.sender == this.currentUser.username" class="col-1" style="padding-left: 17px;">
+                                            <i class="material-icons double-tick">done_all</i>
+                                        </div>
+                                        <div *ngIf="m.messages[0]?.sender != this.currentUser.username" class="col-1" style="padding-left: 17px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-9 inner-card-msg">
+                    <div class="full-height-msg pad">
+                        <div class="message-history">
+                            <span *ngIf="msgHistory[0].time != 'cs3219'" >
+                                <div *ngFor="let m of msgHistory.slice().reverse()">
+                                    <!-- sends -->
+                                    <div *ngIf="m.sender == currentUser.username" class="chat-bubble-send">
+                                        <div>
+                                            {{ m.message }}
+                                        </div>
+                                        <div class="tick-go-left">
+                                            <i *ngIf="m.time != 'sending'" class="material-icons msg-hist-double-tick">done_all</i>
+                                            <i *ngIf="m.time == 'sending'" class="material-icons msg-hist-sending">access_time</i>
+                                        </div>
+                                    </div>
+                                    <!-- recieve -->
+                                    <div *ngIf="m.sender != currentUser.username" class="chat-bubble-recieve">
+                                        <span>
+                                            {{ m.message }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <input *ngIf="createNewChat || msgHistory[0].time != 'cs3219'" (keyup.enter)="onSend()" class="message-send-box" type="text" [(ngModel)]="msg" placeholder="Write a message ...">
+                        <i *ngIf="createNewChat && msg !='' || msgHistory[0].time != 'cs3219' && msg !=''" class="material-icons send-msg-btn" (click)="onSend()">send</i>
+                        <i *ngIf="createNewChat && msg =='' || msgHistory[0].time != 'cs3219' && msg ==''" class="material-icons send-msg-btn-disabled">send</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

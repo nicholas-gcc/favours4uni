@@ -1,0 +1,397 @@
+@media(max-device-width:1400px){
+    html{
+      /* -moz-transform: scale(0.65, 0.65); */
+      zoom: 0.65 !important;
+    }
+}
+
+@media(max-device-width:1550px){
+    html{
+      /* -moz-transform: scale(0.30, 0.30); */
+      zoom: 0.79;
+    }
+}
+
+/* @media only screen and (max-width: 1700px) {
+    #top-half-area {
+        display: flex;
+        flex-flow: column;
+    }
+    #btm-half-area {
+        display: flex;
+        flex-flow: column;
+    }
+    #first-place {
+        float: none !important;
+    } 
+
+    #toggle-buttons {
+        margin-right: 10px !important;
+    }
+} */
+
+/* @media only screen and (max-width: 1710px) {
+    #two-to-four {
+        display: none;
+    }
+} */
+
+.profile {
+    font-size:35px; 
+    float: right; 
+    cursor: pointer;
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #FF8176;
+    background-color: #FF8176;
+}
+
+.logout-text {
+    cursor: pointer; 
+    float: right; 
+    margin-right: 20px; 
+    margin-top: 14px;
+    font-family:"Futura Book";
+}
+
+.login-text {
+    cursor: pointer; 
+    float: right; 
+    margin-right: 20px; 
+    margin-top: 8px;
+    font-family:"Futura Book";
+}
+
+.chat-btn {
+    position: absolute;
+    right: 44px;
+    font-size: 26px;
+    top: 115px;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.chat-btn:hover {
+    background-color: #FF8176;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.Futura-Font{
+    font-family:"Futura Book";
+    font-size: 35px;
+    font-weight: 1000;
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+ }
+
+ .text-float {
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+ }
+
+ @keyframes floating {
+    0% { transform: translate(-30px,  0px); }
+    80%   { transform: translate(3px, 0px); }   
+    100%   { transform: translate(0, 0px); }   
+}
+
+.big-area-leader {
+    padding: 20px 50px 0px 50px;
+    min-height: 500px;
+    overflow-x: auto;
+    min-width: 700px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    display: block;
+}
+
+.header-text {
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.toggle-position {
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+    margin-right: 10%;
+}
+
+.toggle-date {
+    width: 120px;
+    height: 40px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:"Futura";
+    font-weight: 600;
+    font-size: 15px;
+    border-color: white;
+    border-style: solid;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05),0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
+    cursor: pointer;
+}
+
+.date-left {
+    border-radius: 10px 0 0 10px;
+    border-width: 4px 0px 4px 4px;
+}
+
+.date-right {
+    border-radius: 0px 10px 10px 0px;
+    border-width: 4px 4px 4px 0px;
+}
+
+.date-left:hover {
+    border-color: #FF8176;
+}
+
+.date-right:hover {
+    border-color: #FF8176;
+}
+
+.badge-selected {
+    background-color: #FF8176;
+    color: #FEF7ED;
+}
+
+.badge-not-selected {
+    background-color: white;
+    color: #212529;
+}
+
+.half-area-leader {
+    height: 50%; 
+    align-items: center; 
+    justify-content: center; 
+    height: 370px;
+}
+
+.card-area-leader {
+    min-width: 300px; 
+    width: 30% !important;
+    /* height: 100%;  */
+    align-items: center; 
+    justify-content: center;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.row-div {
+    width: 50%; 
+    padding: 10px 20px;
+}
+
+.outer-card-leader {
+    height: 33vh;
+    max-height: 313px;
+    min-height: 313px;
+    width: 41vh;
+    min-width: 443px;
+    max-width: 463px;
+    margin: 5px 20px 2px 10px; 
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05),0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.outer-card-leader:hover {
+    animation-name: card-float;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card-float {
+    0% { transform: translate(0px,  0px); }
+    100%   { transform: translate(0px, -8px); }   
+}
+
+.inner-card {
+    height: 100%;
+    background-color: #FEF7ED;
+    border-radius: 10px;
+    padding: 25px 20px 20px 20px;
+}
+
+.inner-card-professional {
+    height: 100%;
+    background-color: #DFF1FF;
+    border-radius: 10px;
+    padding: 25px 20px 20px 20px;
+}
+
+.card-title {
+    font-family:"Futura";
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.first-place-name {
+    margin-top: 20px;
+    text-align: center;
+    font-family:"Futura";
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.first-completion-badge {
+    border-radius: 10px;
+    background-color: #FF8176;
+    color: #FEF7ED;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-pic-first {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 1px solid #FF8176;
+    background-color: #FF8176;
+}
+
+.profile-pic-others {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    background-color: #FF8176;
+}
+
+.completion-badge {
+    border-radius: 10px;
+    background-color: #FF8176;
+    color: #FEF7ED;
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-outer-card {
+    height: 10vh;
+    max-height: 95px;
+    min-height: 95px;
+    max-width: 900px;
+    min-width: 600px;
+    margin: 12px 0; 
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05),0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.row-outer-card:hover {
+    animation-name: card-float;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.row-inner-card {
+    height: 100%; 
+    width: 100%;
+    background-color: #FEF7ED;
+    border-radius: 10px;
+}
+
+.row-inner-card-professional {
+    height: 100%; 
+    width: 100%;
+    background-color: #DFF1FF;
+    border-radius: 10px;
+}
+
+.row-full-height {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.row-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+}
+
+.rank-number {
+    font-family:"Futura Book";
+    font-size: 25px;
+    font-weight: 1000;
+    max-width: 80px;
+}
+
+.gold {
+    margin-left: 10px;
+    color: #d4af37;
+}
+
+.silver {
+    color: #b8bdbf;
+}
+
+.bronze {
+    color: #E9BF9E;
+}
+
+.pic-and-name {
+    justify-content: start !important;
+}
+
+.row-name-title {
+    font-family:"Futura";
+    font-size: 20px;
+    line-height: 1.1;
+    margin-left: 25px;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
