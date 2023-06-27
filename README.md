@@ -21,9 +21,12 @@ https://favours4uni.web.app/dashboard
 4. Your application is now deployed locally! You can visit the website at http://localhost:4200. If you get the error command ng isn't found, you might need to run `npm install @angular/cli`
 
 ## Reflections:
-* As a first attempt at designing a full CRUD app, I understand some of the code is messy. This project was built with speed of implementation in mind. With more time and knowledge looking back, this can and should be refactored into a proper microservice architecture. For anyone viewing this project, while it is not actively maintained, I'd love to discuss ideas with you for my learning!
+* As a first attempt at designing a full CRUD app, I understand some of the code is messy. This project was built a while back, with speed of implementation in mind. With more time and knowledge looking back (especially as I finish university and have done professional internships), this can and should be refactored into a proper microservice architecture, simply to decouple the intertwined components. For anyone viewing this project, while it is not actively maintained, I'd love to discuss ideas with you for my learning!
+  
 * Ideally, APIs for favours, authentication and chats would be sitting behind an API gateway, and each service having its own deployment environment independent of a central monolithic structure dependent on Firebase so there is no single point of failure
+  
 * The chats service should be built with WebSockets
+  
 * Each service should have a well-defined structure, separating components into models, controllers, validators, middleware and configurations.
 
 
