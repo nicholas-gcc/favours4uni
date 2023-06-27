@@ -23,11 +23,13 @@ https://favours4uni.web.app/dashboard
 ## Reflections:
 * As a first attempt at designing a full CRUD app, I understand some of the code is messy. This project was built a while back, with speed of implementation in mind. With more time and knowledge looking back (especially as I finish university and have done professional internships), this can and should be refactored into a proper microservice architecture, simply to decouple the intertwined components. For anyone viewing this project, while it is not actively maintained, I'd love to discuss ideas with you for my learning!
   
-* Ideally, APIs for favours, authentication and chats would be sitting behind an API gateway, and each service having its own deployment environment independent of a central monolithic structure dependent on Firebase so there is no single point of failure
+* Ideally, APIs for favours, authentication and chats would be sitting behind an API gateway, and each service having its own deployment environment independent of a central monolithic structure dependent on Firebase so there is no single point of failure. Experimenting with Kubernetes for container orchestration would be cool too
   
 * The chats service should be built with WebSockets
   
 * Each service should have a well-defined structure, separating components into models, controllers, validators, middleware and configurations.
+
+* Also, TDD using a framework like Mocha and Chai + automated testing with GitHub actions would have been a useful exercise
 
 
 
